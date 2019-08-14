@@ -1,0 +1,166 @@
+/* ------------------- ALL STRUCTURE OF PAGE ------------------- */
+*
+{
+	box-sizing: border-box;
+}
+
+/* ------------------- BODY OF PAGE -------------------*/
+body
+{
+	margin: 1px;
+	font-family: Arial;
+	height: 100%;
+}
+
+/* ------------------- HEADER OF PAGE -------------------*/
+header
+{
+	width: 40%;
+	border: solid 1px;
+}
+
+header ul
+{
+	display: flex;
+	margin: 0;
+	padding-left: 0;
+}
+
+header li
+{
+	list-style-type: none;
+	padding: 5px;
+}
+
+header a
+{
+	text-decoration: none;
+}
+
+/* ------------------- ROW AND COLUMN OF PAGE -------------------*/
+.row-top
+{
+	display: -webkit-flex;
+	display: flex;
+	height: 300px;
+}
+
+.col-left-top
+{
+	width: 50%;
+	height: 300px;
+	text-align: center;
+	border: solid 1px;
+}
+
+.col-right-top
+{
+	width: 50%;
+	height: 200px;
+	display: block;
+}
+
+.row-text-top
+{
+	height: 100%;
+	display: flex;
+	border: solid 1px;
+}
+
+.row-text-video-bottom
+{
+	height: 50%;
+	display: flex;
+}
+
+.item-area
+{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border: solid 1px;
+}
+
+/*-------------------------------------------------------------------*/
+
+.row-buttons
+{
+	display: flex;
+	border: solid 1px;
+}
+
+/*-------------------------------------------------------------------*/
+
+.row-bottom
+{
+	display: -webkit-flex;
+	display: flex;
+	height: 100px;
+}
+
+.col-left-bottom
+{
+	width: 50%;
+	height: 100px;
+	text-align: center;
+}
+
+.col-right-bottom
+{
+	width: 50%;
+	height: 100px;
+	display: block;
+}
+
+.row-button-bottom
+{
+	display: -webkit-flex;
+	display: flex;
+	height: 200px;
+}
+
+.row-itens-bottom
+{
+	display: -webkit-flex;
+	display: flex;
+}
+
+/* ------------------- ITENS BOTTOM -------------------*/
+.buttons
+{
+	width: 25%;
+	padding: 10px;
+	border: solid 1px;
+}
+
+.images-placeholder-bottom
+{
+	width: 33%;
+	text-align: center;
+	border: solid 1px;
+}
+
+.form
+{
+	width: 100%;
+	height: 190px;
+	border: solid 1px;
+}
+
+.text-bottom
+{
+	width: 100%;
+	border: solid 1px;
+}
+
+.stars
+{
+	width: 50%;
+	border: solid 1px;	
+}
+
+.undefined
+{
+	width: 50%;
+	border: solid 1px;	
+}

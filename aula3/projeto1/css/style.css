@@ -1,0 +1,44 @@
+body
+{
+	font-family: Arial, MS Sans Serif;
+	background-image: url(../assets/img/papyrus.png);
+}
+
+h1
+{
+	color: #f9f9f9;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	text-align: center;
+	background-color: #3d3d3d;
+}
+
+a
+{
+}
+
+p
+{
+	font-weight: bold;
+	padding-left: 5%;
+	padding-right: 5%;
+	color: #878787;
+}
+
+p.topics
+{
+	color: #424242;
+	padding-top: 5%;
+}
+
+ul
+{
+	padding-left: 10%;
+}
+
+li
+{
+	font-weight: lighter;
+	color: #424242;
+}
+
