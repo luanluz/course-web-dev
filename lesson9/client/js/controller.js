@@ -12,20 +12,21 @@ function listaAlunos()
     // Função do jQuery para obter os dados JSON do servidor local
     $(document).ready(function()
     {
-        $.get( "http://localhost:3003/", function(data)
+        $.get( "http://localhost:3000/alunos", function(data)
         {
+
+            // Limpando dados
+            document.getElementById("dados").innerHTML = '';
     
-        // For para percorrer todos os dados e imprimir no HTML
-        for(let i=0; i<data.length; i++)
-        {
-    
-            // Adicionado nome do dado atual 
-            document.getElementById("nome").innerHTML += data[i].nome;
-    
-            // Adicionado dados
-            document.getElementById("dados").innerHTML += data[i].matricula + "<br>";
-            document.getElementById("dados").innerHTML += data[i].curso.nome + "<br><br>";
-        }
+            // For para percorrer todos os dados e imprimir no HTML
+            for(let i=0; i<data.length; i++)
+            {
+        
+                // Adicionado dados
+                document.getElementById("dados").innerHTML += "Nome: <strong>" + data[i].nome + "</strong><br>";
+                document.getElementById("dados").innerHTML += "Matrícula: <strong>" + data[i].matricula + "</strong><br>";
+                document.getElementById("dados").innerHTML += "Curso: <strong>" + data[i].curso.nome + "</strong><br><br>";
+            }
         
         });
     });
@@ -36,8 +37,8 @@ function listaAlunos()
 function listaProjetos()
 {
     // Adicionado dados do título
-    document.getElementById("dados-nome").innerHTML = "Alunos";
-    document.getElementById("dados-description").innerHTML = "lista de alunos";
+    document.getElementById("dados-nome").innerHTML = "Projetos";
+    document.getElementById("dados-description").innerHTML = "lista de projetos";
 
     // Adicionando a source do JSON
     document.getElementById("data-src-link").innerHTML = "https://dados.ifpb.edu.br/dataset/e99b5cfd-f2f3-4b54-bb4f-6ddd9e480af7/resource/f81de6aa-afde-4cdb-bee0-a9ed2f87c4c3/download/projetos-pesquisa.json"
@@ -45,20 +46,20 @@ function listaProjetos()
     // Função do jQuery para obter os dados JSON do servidor local
     $(document).ready(function()
     {
-        $.get( "http://localhost:3003/", function(data)
+        $.get( "http://localhost:3000/projetos", function(data)
         {
+            // Limpando dados
+            document.getElementById("dados").innerHTML = '';
     
-        // For para percorrer todos os dados e imprimir no HTML
-        for(let i=0; i<data.length; i++)
-        {
-    
-            // Adicionado nome do dado atual 
-            document.getElementById("nome").innerHTML += data[i].titulo;
-    
-            // Adicionado dados
-            document.getElementById("dados").innerHTML += data[i].uo.nome + "<br>";
-            document.getElementById("dados").innerHTML += data[i].uo.inicio_execucao + "<br><br>";
-        }
+            // For para percorrer todos os dados e imprimir no HTML
+            for(let i=0; i<data.length; i++)
+            {
+        
+                // Adicionado dados
+                document.getElementById("dados").innerHTML += "Título: <strong>" + data[i].titulo + "</strong><br>";
+                document.getElementById("dados").innerHTML += "Campus: <strong>" + data[i].uo.nome + "</strong><br>";
+                document.getElementById("dados").innerHTML += "Início de Execução: <strong>" + data[i].inicio_execucao + "</strong><br><br>";
+            }
         
         });
     });

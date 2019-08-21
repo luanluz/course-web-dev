@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+
+    <div onclick="destacarElemento(0)" id="primeiro"">#primeiro</div>
+
+    <div onclick="destacarElemento(1)" class="destaque" id="segundo">Segundo</div>
+    
+    <div onclick="destacarElemento(2)" class="terceiro ultimo">.terceiro .ultimo</div>
+
+    <button id="btn_um" onclick="destacarRemover()">
+        Destacar
+    </button>
+ 
+    
+    
+    <script>              
+    
+        // Selecionando elementos através do Id e
+        // atribuindo classes
+        // const pri = document.getElementById('segundo')
+        // pri.classList.remove('destaque')
+        // pri.classList.add('destaque-azul')
+        // pri.innerHTML = "mudança"
+        // pri.innerText = "outra mudança"
+
+        
+
+        // Selecionando elementos através da tag name e
+        // atribuindo classes
+
+        // const dis = document.getElementsByTagName('div')
+
+        // // Convertendo para Array, caso seja necessário
+        // const lista = Array.from(document.getElementsByTagName('div'))
+
+        // // Percorrendo o array em cada index e adicionando
+        // // classe
+        // // Método 1:
+        // for (let i = 0; i < lista.length; i++) {
+        //     lista[i].classList.add('destaque-azul')
+        // }
+
+        // // Método 2:
+        // lista.forEach(e => e.classList.remove('destaque-azul'))
+      
+        function destacarRemover()
+        {
+            const lista_dois = [...document.getElementsByTagName('div')]
+
+            const button = document.getElementById('btn_um')
+
+            if(button.innerText === 'Destacar')
+            {
+                lista_dois.forEach( l => l.classList.add('destaque'))
+                button.innerText = "Remover destaque"
+            }
+            else
+            {
+                lista_dois.forEach( l => l.classList.remove('destaque'))
+                button.innerText = "Destacar"
+            }
+        }
+
+        function destacarElemento(index)
+        {
+            const lista_dois = [...document.getElementsByTagName('div')]
+            lista_dois[index].classList.toggle('destaque')
+        }
+
+    </script>
+
+</body>
+</html>
