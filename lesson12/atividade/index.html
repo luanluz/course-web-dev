@@ -15,49 +15,7 @@
         <input type="text" name="endereco" placeholder="Digite o endereço">
         <button onclick="salvar()">Salvar</button>
     </div>
-    <script>
-
-        // ...
-        function salvar()
-        {
-            let valorNome = document.getElementsByName('nome').value;
-            let valorTelefone = document.getElementsByName('telefone').value;
-            let valorEndereco = document.getElementsByName('endereco').value;
-
-            const body = document.querySelector('body');
-            const div = document.createElement('div');
-            const nome = document.createElement('p');
-            const telefone = document.createElement('p');
-            const endereco = document.createElement('p');
-            const editar = document.createElement('button');
-            const excluir = document.createElement('button');
-
-            nome.innerHTML = `Nome: ${valorNome}`;
-            telefone.innerHTML = `Telefone: ${valorTelefone}`;
-            endereco.innerHTML = `Endereço: ${valorEndereco}`;
-
-            editar.innerHTML = "Editar";
-            excluir.innerHTML = "Excluir";
-
-
-            body.appendChild(div);
-
-            div.appendChild(nome);
-            div.appendChild(telefone);
-            div.appendChild(endereco);
-            div.appendChild(editar);
-            div.appendChild(excluir);
-
-            const linha = document.createElement('p');
-            linha.innerHTML = '--------------------------------------------'
-            div.appendChild(linha);
-        }
-
-        // body.removeChild(div1)
-        // body.removeChild(paragrafo)
-        // const divs = document.querySelectorAll('div')
-
-</script>
+    <script src="js/controller.js"></script>
 </body>
 
 </html>
