@@ -8,11 +8,130 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         /* ... */
+        
+        *
+        {
+            margin: 0;
+        }
+
+        html
+        {
+            width: 100%;
+        }
+        
+         /* Estilo do corpo */
+        .body
+        {
+            box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
+            background-color: lightgray;
+        }
+        /* -------------------------------------------------------------- */
+        
+        
+        /* Estilo do cabeçalho */
+        .header
+        {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            box-sizing: content-box; /* ficou muito ruim com content-box */
+            background-color: #333;
+            border: solid 5px #4faddb;
+        }
+
+        .header a
+        {
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+        }
+        /* -------------------------------------------------------------- */
+
+
+        /* Estilo da logo */
+        .logo
+        {
+            position: relative;
+            float: left;
+            height: 50px;
+            width: 15%;
+            padding: 15px;
+        }
+
+        img
+        {
+            height: 100%;
+        }
+        /* -------------------------------------------------------------- */
+
+
+        /* Estilo do menu */
+        .menu
+        {
+            padding: 10px;
+            position: relative;
+            float: left;
+            height: 80px;
+        }
+
+        .menu li
+        {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        .menu a
+        {
+            padding: 15px;
+        }
+
+        .menu a:hover
+        {
+            background-color: #4faddb;
+            color: #fff;
+            border-radius: 5px;
+        }
+        
+        /* -------------------------------------------------------------- */
+
+
+        /* Autenticação */
+        .auth
+        {
+            position: relative;
+            float: right;
+        }
+
+        /* -------------------------------------------------------------- */
+
+        /* Botão e Destaque */
+        .botao
+        {
+            color: #fff;
+            padding: 10px 25px 10px 25px;
+            border-radius: 30px;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .destaque
+        {
+            background-color: #f50a35;
+        }
+
+        .destaque:active
+        {
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        /* -------------------------------------------------------------- */
+
+        
     </style>
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header class="header">
         <div class="logo">
             <a href="#inicio">
                 <img src="https://bucket-gw-cni-static-cms-si.s3.amazonaws.com/static/img/logos/azul/SENAI.svg" alt="Logo" />
@@ -37,7 +156,7 @@
                 </li>
             </ul>
         </nav>
-        <aside class="autenticacao">
+        <aside class="auth">
             <a href="#login">Login</a>
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>

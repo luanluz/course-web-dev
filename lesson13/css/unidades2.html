@@ -5,6 +5,25 @@
     <title>Unidades #02</title>
     <style>
         /* ... */
+        .fora
+        {
+            position: relative;
+            background-color: midnightblue;
+            height: 400px;
+            width: 400px;
+            padding: 50px;
+        }
+
+        .dentro
+        {
+            background-color: darkslategrey;
+            height: 100px;
+            width: 100%;
+            position: static; /* Posição relativa ao conteúdo*/
+            position: relative; /* Posição relativa ao conteúdo*/
+            position: absolute; /* Posição relativa ao conteúdo e ao padding*/
+            position: fixed; /* Relativo ao viewport e não é relativo ao padding*/
+        }
     </style>
 </head>
 <body>
