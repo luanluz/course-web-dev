@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* ... */
+        *
+        {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body
+        {
+            font-family: 'Roboto', sans-serif;
+        }
+
+         /* Estilo do corpo */
+        .body
+        {
+            background-color: lightgray;
+        }
+
+        .curso
+        {
+            margin: 20px;
+            float: left;
+            height: 350px;
+            width: 275px;
+            background-color: #fff;
+            box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .curso img
+        {
+            width: 100%;
+            height: 55%;
+            padding: 5px;
+        }
+
+        .curso-info
+        {
+            padding: 15px;
+            width: 160px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .curso-info h4
+        {
+            font-size: 1.5em;
+        }
+
+        .curso-info p
+        {
+            color: gray;
+            margin: 5px;
+            font-size: 1.3em;
+        }
+
+        .curso-preco
+        {
+            padding-top: 1vw;
+            padding-left: 2vw;
+        }
+
+        .preco-de
+        {
+            color: maroon;
+            text-decoration-line: line-through;
+            font-size: 1.1em;
+        }
+
+        .preco-por
+        {
+            color: green;
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Card</h1>
+
+    <h2>Objetivo</h2>
+    <img src="objetivo.png" height="340" alt="Objetivo">
+
+    <h2>Resultado</h2>
+    <div class="row">
+        <div class="curso">
+            <img src="http://sistemafieto.com.br/gestor/Repositorio/CRP.Sistema.PortalSistemaFIETO.SENAI.CursoSenai/636934446188656406.JPG" />
+            <div class="curso-info">
+                <h4>Técnico em Automação Industrial - Semipresencial</h4>
+                <p>Prof. Fulado Oliveira</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$ 3000,00</span>
+                <span class="preco-por">R$ 2850,00</span>
+            </div>
+        </div>
+        <div class="curso">
+            <img src="http://sistemafieto.com.br/gestor/Repositorio/CRP.Sistema.PortalSistemaFIETO.SENAI.CursoSenai/636790228116449283.png" />
+            <div class="curso-info">
+                <h4>Técnico em Edificações</h4>
+                <p>Prof. Sicrano Filho</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$ 3500,00</span>
+                <span class="preco-por">R$ 3250,00</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
