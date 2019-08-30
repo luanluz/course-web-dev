@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Desafio Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         /* ... */
@@ -12,18 +12,19 @@
         *
         {
             margin: 0;
+            padding: 0;
         }
 
         html
         {
             width: 100%;
+            font-family: 'Oswald', sans-serif;
         }
         
          /* Estilo do corpo */
         .body
         {
             box-sizing: border-box;
-            font-family: 'Oswald', sans-serif;
             background-color: lightgray;
         }
         /* -------------------------------------------------------------- */
@@ -53,7 +54,7 @@
         .logo
         {
             position: relative;
-            float: left;
+            display: inline-block;
             height: 50px;
             width: 15%;
             padding: 15px;
@@ -69,10 +70,9 @@
         /* Estilo do menu */
         .menu
         {
-            padding: 10px;
-            position: relative;
-            float: left;
-            height: 80px;
+            position: absolute;
+            top: 30%;
+            display: inline-block;
         }
 
         .menu li
@@ -100,6 +100,8 @@
         .auth
         {
             position: relative;
+            top: 30%;
+            right: 5%;
             float: right;
         }
 
@@ -126,7 +128,35 @@
 
         /* -------------------------------------------------------------- */
 
-        
+        /* Botão e Destaque */
+        .menu-toggle
+        {
+            position: relative;
+            top: 25%;
+            right: 10%;
+            float: right;
+            height: 35px;
+            width: 35px;
+        }
+        /* -------------------------------------------------------------- */
+
+
+         /* MediaQuery */
+        @media(min-width: 679px), (orientation: landscape)
+        {
+            .menu-toggle{display: none;}
+        }
+
+        @media(max-width: 680px)
+        {
+            .menu{display: none;}
+        }
+
+        @media(max-width: 910px)
+        {
+            .auth{display: none;}
+        }
+
     </style>
 </head>
 
