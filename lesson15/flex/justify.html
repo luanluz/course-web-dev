@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Justify</title>
+    <style>
+        .container
+        {
+            display: flex;
+            max-width: 420px;
+            margin: 0 auto;
+            border: solid 1px #ccc;
+        }
+
+        .item
+        {
+            margin: 5px;
+            background-color: tomato;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .flex-start
+        {
+            justify-content: flex-start;
+        }
+
+        .flex-end
+        {
+            justify-content: flex-end;
+        }
+
+        .center
+        {
+            justify-content: center;
+        }
+
+        .space-between
+        {
+            justify-content: space-between;
+        }
+
+        .space-around
+        {
+            justify-content: space-around;
+        }
+
+        .flex
+        {
+            flex: 1;
+        }
+
+        .column
+        {
+            min-height: 200px;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <!-- trabalhando com Justify em linhas -->
+    <h1> justify-content: flex-start / linhas</h1>
+    <section class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: flex-end  / linhas</h1>
+    <section class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: center / linhas</h1>
+    <section class="container center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: space-between / linhas</h1>
+    <section class="container space-between">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: space-around / linhas</h1>
+    <section class="container space-around">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: space-around / com flex:1 / linhas</h1>
+    <section class="container space-around">
+        <div class="item flex">1</div>
+        <div class="item flex">2</div>
+        <div class="item flex">3</div>
+    </section>
+
+    <!-- trabalhando com Justify em colunas -->
+    <h1> justify-content: flex-start / colunas</h1>
+    <section class="container flex-start column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: flex-end  / colunas</h1>
+    <section class="container flex-end column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: center / colunas</h1>
+    <section class="container center column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: space-between / colunas</h1>
+    <section class="container space-between column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <h1> justify-content: space-around / colunas</h1>
+    <section class="container space-around column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+</body>
+</html>

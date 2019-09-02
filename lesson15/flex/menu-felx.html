@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu Flex</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *
+        {
+            padding: 0;
+        }
+
+        html
+        {
+            width: 100%;
+        }
+        
+         /* Estilo do corpo */
+        body
+        {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            margin: 0px;
+        }
+        /* -------------------------------------------------------------- */
+        
+        
+        /* Estilo do cabeçalho */
+        .header
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 60px;
+            box-sizing: content-box;
+            background-color: rgba(255, 255, 255, 0.75);
+            box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .header a
+        {
+            text-decoration: none;
+            color: rgba(0, 91, 170, 0.75);
+            font-size: 1.3em;
+        }
+        /* -------------------------------------------------------------- */
+
+
+        /* Estilo da logo */
+        .logo
+        {
+            justify-content: center;
+            padding: 0px 15px;
+            height: 50px;
+        }
+
+        img
+        {
+            height: 100%;
+        }
+        /* -------------------------------------------------------------- */
+
+        /* Estilo do menu */
+        .menu ul
+        {
+            display: flex;
+        }
+
+        .menu li
+        {
+            flex: 1;
+            list-style-type: none;
+        }
+
+        .menu a
+        {
+            padding: 15px;
+        }
+
+        .menu a:hover
+        {
+            background-color:rgba(0, 91, 170, 0.5);
+            color: #fff;
+            border-radius: 20px;
+        }
+        /* -------------------------------------------------------------- */
+
+        /* Autenticação */
+        .auth
+        {
+            padding: 0px 15px;
+        }
+        /* -------------------------------------------------------------- */
+
+        /* Botão e Destaque */
+        .botao
+        {
+            padding: 10px 25px;
+            border-radius: 30px;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+        }
+        
+        .destaque
+        {
+            background-color:rgba(22, 22, 22, 0.1);;
+        }
+
+        .destaque:active
+        {
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+        }
+        /* -------------------------------------------------------------- */
+
+        /* Botão e Destaque */
+        .menu-toggle
+        {
+            position: relative;
+            top: 15%;
+            right: 5%;
+            float: right;
+            height: 35px;
+            width: 35px;
+            color: #fff;
+            background-color: rgba(0, 91, 170, 0.75);;
+            box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+            border: none;
+            border-radius: 3px;
+        }
+        /* -------------------------------------------------------------- */
+
+        /* MediaQuery */
+        @media(min-width: 679px), (orientation: landscape)
+        {
+            .menu-toggle{display: none;}
+        }
+
+        @media(max-width: 680px)
+        {
+            .menu{display: none;}
+        }
+
+        @media(max-width: 910px)
+        {
+            .auth{display: none;}
+        }
+        /* -------------------------------------------------------------- */
+
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="https://bucket-gw-cni-static-cms-si.s3.amazonaws.com/static/img/logos/azul/SENAI.svg" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="auth">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+</body>
+</html>
