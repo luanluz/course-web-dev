@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wireframe 2</title>
+    <style>
+        /* ... */
+        * /* Resetando CSS */
+        {
+            padding: 0;
+            margin: 0;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* Definindo o layout como grid e distribuindo os elementos na tela*/
+        body
+        {
+            padding: 25px;
+            box-sizing: border-box;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+            display: grid; /* definindo grid*/
+            grid-gap: 30px;
+            min-height: 100vh; /* definindo a altura mínima como 100xaltura*/
+            grid-template-columns: 1fr; /* definindo duas colunas para toda a página*/
+            grid-template-rows: 15vw 1fr 10vw; /* definido três linhaspara toda a página*/
+            grid-template-areas: 'cabecalho cabecalho' 'conteudo conteudo' 'rodape rodape' /* 
+                apresentando o layout na tela com as disposições configuradas*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no header*/
+        header
+        {
+            text-align: center;
+            grid-area: cabecalho; /* definindo o nome da área*/
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+
+        header h1
+        {
+            font-size: 1.6em;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+       /* adicionando configurações no main*/
+        main
+        {
+            text-align: center;
+            grid-area: conteudo;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+
+        main h4
+        {
+            font-size: 1.4em;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no footer*/
+        footer
+        {
+            text-align: center;
+            grid-area: rodape; /* definindo o nome da área*/
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+
+        footer h4
+        {
+            font-size: 1.4em;
+        }
+        /* ----------------------------------------------------------------------------- */
+    </style>
+</head>
+<body>
+    <!-- Header-->
+	<!-- 
+		Estrutura que ficará no topo do site.
+		Normalmente tendo o nome do site.
+	-->
+	<header>
+		<h1> HEADER </h1>
+		<p>(first thing you want users to see)</p>
+	</header>
+	<!-- / Header -->
+
+	<!-- Main -->
+	<!-- 
+		Estrutura main, que conterá a estrutura principal 
+		do site.
+	-->
+	<main>
+
+		<!-- Section -->
+		<!-- 
+			Estrutura que conterá alguma seção do site.
+		-->
+		<section>
+
+			<!-- Article -->
+			<!-- 
+				Estrutura que conterá algum "artigo" do site.
+			-->
+			<article>
+
+				<!-- Title and Paragraph -->
+				<h4>BODY</h4>
+				<p>(followed by the content)</p>
+				<!-- / Title and Paragraph -->
+
+			</article>
+			<!-- / Article -->
+
+		</section>
+		<!-- / Section -->
+
+		
+	</main>
+	<!-- / Main -->
+
+
+	<!-- Footer -->
+	<!-- 
+		Estrutura que ficará abaixo de todas as outras estruturas
+		do site cabeçalho do site. Normalmente, contém dados de
+		contato, localização e informação sobre os direitos
+		autorais do site.
+	-->
+	<footer>
+
+		<!-- Title and Paragraph -->
+		<h4>FOOTER</h4>
+		<p>(typically the less important stuff)</p>
+		<!-- / Title and Paragraph -->
+
+	</footer>
+	<!-- / Footer -->
+</body>
+</html>

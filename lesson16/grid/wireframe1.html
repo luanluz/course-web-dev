@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wirefram 1</title>
+    <style>
+        /* ... */
+        * /* Resetando CSS */
+        {
+            padding: 0;
+            margin: 0;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* Definindo o layout como grid e distribuindo os elementos na tela*/
+        body
+        {
+            padding: 10px;
+            box-sizing: border-box;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+            display: grid; /* definindo grid*/
+            grid-gap: 10px;
+            min-height: 100vh; /* definindo a altura mínima como 100xaltura*/
+            grid-template-columns: 300px 1fr; /* definindo duas colunas para toda a página*/
+            grid-template-rows: 50px 70px 1fr 50px; /* definido três linhaspara toda a página*/
+            grid-template-areas: 'cabecalho cabecalho' 'navegacao navegacao' 'conteudo conteudo' 'rodape rodape' /* 
+                apresentando o layout na tela com as disposições configuradas*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no header*/
+        header
+        {
+            text-align: center;
+            grid-area: cabecalho; /* definindo o nome da área*/
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no nav*/
+        nav
+        {
+            grid-area: navegacao; /* definindo o nome da área*/
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+
+        nav ul
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li
+        {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        nav a
+        {
+            text-decoration: none;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+       /* adicionando configurações no main*/
+        main
+        {
+            grid-area: conteudo;
+        }
+
+        .row
+        {
+            height: 100%;
+            display: flex;
+        }
+
+        .col-content-area
+        {
+            grid-area: content-area;
+            text-align: center;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+            width: 35%;
+        }
+
+        .col-cards-area
+        {
+            grid-area: cards-area;
+            width: 65%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .card-area
+        {
+            text-align: center;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+            height: 100%;
+            width: 100%;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no footer*/
+        footer
+        {
+            text-align: center;
+            grid-area: rodape; /* definindo o nome da área*/
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando 'responsividade' para dispositivos com telas pequenas*/
+        @media(max-width: 700px) /*quando tiver 700px ou menos*/
+        {
+            body
+            {
+                grid-template-columns: 1fr; /* alterando para apenas uma coluna*/
+                grid-template-rows: 50px 70px 1fr 50px;
+                grid-template-areas: 'cabecalho' 'navegacao' 'conteudo' 'rodape'; /* apresentando 
+                    os elementos no novo layout na tela com as disposições reconfiguradas*/
+            }
+
+            /* 
+            .col-content-area{width: 100%; height: 100%;} */
+            .row{display: block}
+            .col-cards-area{width: 100%; height: 100%;}
+            .col-content-area{display: none;}
+        }
+        /* ----------------------------------------------------------------------------- */
+    </style>
+</head>
+<body>
+    <!-- Header-->
+	<!-- 
+		Estrutura que ficará no topo do site.
+		Normalmente tendo o nome do site.
+	-->
+	<header>
+            <h1> Header</h1>
+    </header>
+    <!-- / Header -->
+    
+    <!-- Nav-Bar -->
+    <!-- 
+        Estrutura que ficará abaixo do cabeçalho do site.
+        E, normalmente, tem lista de páginas para acessar.
+    -->
+    <nav>
+    
+        <!-- List's Menu -->
+        <ul>
+            <li> <a href="#">Navigation</a> </li>
+    
+            <li> <a href="#">Area</a> </li>
+        </ul>
+        <!-- / List's Menu -->
+    
+    </nav>
+    <!-- / Nav-Bar -->
+    
+        <!-- Main -->
+        <!-- 
+            Estrutura main, que conterá a estrutura principal 
+            do site.
+        -->
+        <main>
+    
+            <div class="row">
+    
+                <!-- Section -->
+                <!-- 
+                    Estrutura que conterá alguma seção do site.
+                -->
+                <section class="col-content-area">
+    
+                    <!-- Article -->
+                    <!-- 
+                        Estrutura que conterá algum "artigo" do site.
+                        No caso, uma área.
+                    -->
+                    <article class="content-area">
+                        <!-- Paragraph -->
+                        <p> Content Area </p>
+                        <!-- / Paragraph -->
+                    </article>
+                    <!-- / Article -->
+    
+                </section>
+                <!-- / Section -->
+    
+    
+                <!-- Section -->
+                <!-- 
+                    Estrutura que conterá alguma seção do site.
+                -->
+                <section class="col-cards-area">
+                    
+                    <article class="card-area">
+                        <!-- Paragraph -->
+                        <p> Image + Text </p>
+                        <!-- / Paragraph -->
+                    </article>
+                    <!-- / Article -->
+
+                    <article class="card-area">
+                        <!-- Paragraph -->
+                        <p> Content Area </p>
+                        <!-- / Paragraph -->
+                    </article>
+                    <!-- / Article -->
+
+                    <article class="card-area">
+                        <!-- Paragraph -->
+                        <p> Image + Text </p>
+                        <!-- / Paragraph -->
+                    </article>
+                    <!-- / Article -->
+
+                    <article class="card-area">
+                        <!-- Paragraph -->
+                        <p> Content Area </p>
+                        <!-- / Paragraph -->
+                    </article>
+                    <!-- / Article -->
+    
+                </section>
+                <!-- / Section -->			
+    
+            </div>
+    
+        </main>
+        <!-- / Main -->
+    
+        <!-- Footer -->
+        <!-- 
+            Estrutura que ficará abaixo de todas as outras estruturas
+            do site cabeçalho do site. Normalmente, contém dados de
+            contato, localização e informação sobre os direitos
+            autorais do site.
+        -->
+        <footer>
+            <p>footer</p>
+        </footer>
+        <!-- / Footer -->
+</body>
+</html>

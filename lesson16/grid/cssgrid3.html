@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #03</title>
+   
+    <style>
+        /* ... */
+        * /* Resetando CSS */
+        {
+            padding: 0;
+            margin: 0;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* Definindo o layout como grid e distribuindo os elementos na tela*/
+        body
+        {
+            display: grid; /* definindo grid*/
+            min-height: 100vh; /* definindo a altura mínima como 100xaltura*/
+            grid-template-columns: 200px 1fr; /* definindo duas colunas para toda a página*/
+            grid-template-rows: 80px 1fr 100px; /* definido três linhaspara toda a página*/
+            grid-template-areas: 'cabecalho cabecalho' 'navegacao conteudo' 'rodape rodape' /* 
+                apresentando o layout na tela com as disposições configuradas*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no header*/
+        header
+        {
+            color: #fff;
+            grid-area: cabecalho; /* definindo o nome da área*/
+            border: solid 1px green; /* definindo uma borda para visualizar o elemento*/
+            background-color: mediumslateblue; /* definindo cor no fundo*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no nav*/
+        nav
+        { 
+            color: #fff;
+            grid-area: navegacao; /* definindo o nome da área*/
+            border: solid 1px tomato; /* definindo uma borda para visualizar o elemento*/
+            background-color: mediumaquamarine; /* definindo cor no fundo*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+       /* adicionando configurações no main*/
+        main
+        {
+            color: #fff;
+            grid-area: conteudo; /* definindo o nome da área*/
+            border: solid 1px blue; /* definindo uma borda para visualizar o elemento*/
+            background-color: mediumvioletred; /* definindo cor no fundo*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando configurações no footer*/
+        footer
+        {
+            color: #fff;
+            grid-area: rodape; /* definindo o nome da área*/
+            border: solid 1px violet; /* definindo uma borda para visualizar o elemento*/
+            background-color: mediumturquoise; /* definindo cor no fundo*/
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* adicionando 'responsividade' para dispositivos com telas pequenas*/
+        @media(max-width: 700px) /*quando tiver 700px ou menos*/
+        {
+            body
+            {
+                grid-template-columns: 1fr; /* alterando para apenas uma coluna*/
+                grid-template-areas: 'cabecalho' 'conteudo' 'rodape'; /* apresentando 
+                    os elementos no novo layout na tela com as disposições reconfiguradas*/
+            }
+
+            /* removendo o nav do layout*/
+            nav{display: none};
+        }
+        /* ----------------------------------------------------------------------------- */
+    </style>
+</head>
+
+<body>
+    <main class="tag">CONTEÚDO (main)</main>
+    <header class="tag">CABEÇALHO (header)</header>
+    <footer class="tag">RODAPÉ (footer)</footer>
+    <nav class="tag">NAVEGAÇÃO (nav)</nav>
+
+   
+</body>
+
+</html>
