@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wireframe</title>
+    <style>
+        /* ... */
+        * /* Resetando CSS */
+        {
+            padding: 0;
+            margin: 0;
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        /* Definindo o layout como grid e distribuindo os elementos na tela*/
+        body
+        {
+            padding: 6px;
+            box-sizing: border-box;
+            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
+            display: grid; /* definindo grid*/
+            grid-gap: 10px;
+            min-height: 100vh;
+            grid-template-columns: 1fr; /* definindo duas colunas para toda a página*/
+            grid-template-rows: 30px 1fr 1fr 1fr;
+            grid-template-areas: 'header' 'top' 'middle' 'bottom'
+        }
+        /* ----------------------------------------------------------------------------- */
+
+        .header
+        {
+            grid-area: header;
+            border: solid 1px #000;
+        }
+
+        .header ul
+        {
+            display: flex;
+            justify-content: start;
+        }
+
+        .header li
+        {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        .header a
+        {
+            font-size: 0.8em;
+            text-decoration: none;
+        }
+
+        .top
+        {
+            grid-area: top;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .top .image
+        {
+            width: 50%;
+            height: 100%;
+            border: solid 1px #000;
+        }
+
+        .top .text-video
+        {
+            width: 50%;
+            height: 100%;
+            border: solid 1px #000;
+            display: grid;
+        }
+
+        .top .item
+        {
+            border: solid 1px #000;
+        }
+
+        .middle
+        {
+            grid-area: middle;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .middle .button
+        {
+            width: 100%;
+            height: 100%;
+            border: solid 1px #000;
+        }
+
+        .bottom
+        {
+            grid-area: bottom;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .bottom .left
+        {
+            width: 40%;
+            height: 100%;
+        }
+
+        .bottom .right
+        {
+            width: 60%;
+            height: 100%;
+            display: flex;
+        }
+
+        .bottom .left .form
+        {
+            height: 50%;
+            width: 100%;
+            border: solid 1px #000;
+        }
+
+        .bottom .left .text
+        {
+            height: 20%;
+            width: 100%;
+            border: solid 1px #000;
+        }
+
+        .bottom .left .stars
+        {
+            height: 14.5%;
+            width: 100%;
+            border: solid 1px #000;
+        }
+
+        .bottom .left .field
+        {
+            height: 12.5%;
+            width: 100%;
+            border: solid 1px #000;
+        }
+
+        .bottom .right .image
+        {
+            width: 33%;
+            height: 100%;
+            border: solid 1px #000;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href=""></a>a</li>
+                <li><a href=""></a>b</li>
+                <li><a href=""></a>c</li>
+                <li><a href=""></a>d</li>
+                <li><a href=""></a>e</li>
+                <li><a href=""></a>f</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="top">
+            <div class="image"><p>image</p></div>
+            <div class="text-video">
+                <div class="item"><p>lorem ipsum</p></div>
+                <div class="item"><p>lorem ipsum</p></div>
+                <div class="item"><p>video</p></div>
+            </div>
+        </section>
+
+        <section class="middle">
+            <div class="button"><p>button</p></div>
+            <div class="button"><p>button</p></div>
+            <div class="button"><p>button</p></div>
+        </section>
+
+        <section class="bottom">
+            <div class="left">
+                <div class="form"><p>form</p></div>
+                <div class="text"><p>lorem ipsum</p></div>
+                <div class="stars"><p>stars</p></div>
+                <div class="field"><p>field</p></div>
+            </div>
+            <div class="right">
+                <div class="image"><p>image</p></div>
+                <div class="image"><p>image</p></div>
+                <div class="image"><p>image</p></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

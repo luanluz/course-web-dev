@@ -23,9 +23,9 @@
             display: grid; /* definindo grid*/
             grid-gap: 10px;
             min-height: 100vh; /* definindo a altura mínima como 100xaltura*/
-            grid-template-columns: 1fr 1fr; /* definindo duas colunas para toda a página*/
-            grid-template-rows: 30px 1fr 50px 300px 100px; /* definido três linhaspara toda a página*/
-            grid-template-areas: 'cabecalho cabecalho' 'col-left-top col-right-top' 'rodape rodape' /* 
+            grid-template-columns: 1fr; /* definindo duas colunas para toda a página*/
+            grid-template-rows: 30px 1fr 50px 300px; /* definido três linhaspara toda a página*/
+            grid-template-areas: 'cabecalho' 'row-top' 'row-buttons' 'row-bottom' /* 
                 apresentando o layout na tela com as disposições configuradas*/
         }
         /* ----------------------------------------------------------------------------- */
@@ -61,6 +61,7 @@
        /* adicionando configurações no main*/
         .row-top
         {
+			grid-area: row-top;
             width: 100%;
             height: 100%;
             display: flex;
@@ -68,16 +69,14 @@
 
         .col-left-top
         {
-            grid-area: col-left-top;
             text-align: center;
             border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
-            width: 100%;
+            width: 40%;
         }
 
         .col-right-top
         {
-            grid-area: col-right-top;
-            width: 65%;
+            width: 60%;
             height: 100%;
             display: grid;
             grid-template-columns: 50% 50%;
@@ -90,15 +89,18 @@
             height: 100%;
             width: 100%;
         }
+
+		.row-buttons
+		{
+			grid-area: row-buttons;
+            width: 100%;
+            height: 100%;
+            display: flex;
+		}
+
+		
         /* ----------------------------------------------------------------------------- */
 
-        /* adicionando configurações no footer*/
-        footer
-        {
-            text-align: center;
-            grid-area: rodape; /* definindo o nome da área*/
-            border: solid 1px #000; /* definindo uma borda para visualizar o elemento*/
-        }
         /* ----------------------------------------------------------------------------- */
 
         /* adicionando 'responsividade' para dispositivos com telas pequenas*/
@@ -177,17 +179,17 @@
                     Estrutura que será como um "artigo" do site.
                     Nesse caso, conterá um texto.
                 -->
-                <article>
+                <article class="card-area">
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
                 <!-- / article -->
                     
-                <article>
+                <article class="card-area">
                     <p>Lorem ipsum dolor sit amet</p>
                 </article>
                 <!-- / article -->
                     
-                <article>
+                <article class="card-area video">
                     <p>Video</p>
                 </article>
                 <!-- / article -->
@@ -202,41 +204,16 @@
 			Estrutura que conterá alguma seção do site.
 		-->
 		<section class="row-buttons">
-
-			<!-- Article -->
-			<!-- 
-				Estrutura que será como um "artigo" do site.
-				Nesse caso, conterá um botão.
-			-->
-			<article class="buttons">
-				<p>button</p>
-			</article>
-			<!-- / article -->
-
-
-			<!-- Article -->
-			<!-- 
-				Estrutura que será como um "artigo" do site.
-				Nesse caso, conterá um botão.
-			-->
-			<article class="buttons">
-				<p>button</p>
-			</article>
-			<!-- / article -->
-
-
-			<!-- Article -->
-			<!-- 
-				Estrutura que será como um "artigo" do site.
-				Nesse caso, conterá um botão.
-			-->
-			<article class="buttons">
-				<p>button</p>
-			</article>
-			<!-- / article -->
-
+			<div class="button">
+				button
+			</div>
+			<div class="button">
+				button
+			</div>
+			<div class="button">
+				button
+			</div>
 		</section>
-		<!-- / Section -->
 
 
 		<!-- Section -->
@@ -247,47 +224,23 @@
 
 			<div class="col-left-bottom">
 				
-				<!-- Article -->
-				<!-- 
-					Estrutura que será como um "artigo" do site.
-					Nesse caso, conterá um formulário.
-				-->
 				<article class="form">
 					<p>Form</p>
 				</article>
-				<!-- / article -->
 
-				<!-- Article -->
-				<!-- 
-					Estrutura que será como um "artigo" do site.
-					Nesse caso, conterá um texto.
-				-->
 				<article class="text-bottom">
 					<p>Lorem ipsum dolor sit amet</p>
 				</article>
-				<!-- / article -->
 
 				<div class="row-itens-bottom">
 					
-					<!-- Article -->
-					<!-- 
-						Estrutura que será como um "artigo" do site.
-						Nesse caso, conterá ícones de estrelas.
-					-->
 					<article class="stars">
 						<p>Stars</p>
 					</article>
-					<!-- / article -->
 
-					<!-- Article -->
-					<!-- 
-						Estrutura que será como um "artigo" do site.
-						Nesse caso, conterá um campo não identificado.
-					-->
 					<article class="undefined">
 						<p>field undefined</p>
 					</article>
-					<!-- / article -->
 
 				</div>
 
@@ -295,45 +248,20 @@
 
 			<div class="col-right-bottom">
 				
-				<!-- Article -->
-				<!-- 
-					Estrutura que será como um "artigo" do site.
-					Nesse caso, conterá imagens.
-				-->
 				<article class="row-button-bottom">
-
-					<!-- Article -->
-					<!-- 
-						Estrutura que será como um "artigo" do site.
-						Nesse caso, uma imagem.
-					-->
 					<p class="images-placeholder-bottom">
 						Image Placeholder
 					</p>
-					<!-- / article -->
 
-					<!-- Article -->
-					<!-- 
-						Estrutura que será como um "artigo" do site.
-						Nesse caso, uma imagem.
-					-->
 					<p class="images-placeholder-bottom">
 						Image Placeholder
 					</p>
-					<!-- / article -->
 
-					<!-- Article -->
-					<!-- 
-						Estrutura que será como um "artigo" do site.
-						Nesse caso, uma imagem.
-					-->
 					<p class="images-placeholder-bottom">
 						Image Placeholder
 					</p>
-					<!-- / article -->
 
 				</article>
-				<!-- / article -->
 
 			</div>
 
