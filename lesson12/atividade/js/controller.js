@@ -37,13 +37,11 @@ function salvar()
 
 function editar(index)
 {
-    let nome = document.getElementsByName('nome')[0].value;
-    let telefone = document.getElementsByName('telefone')[0].value;
-    let endereco = document.getElementsByName('endereco')[0].value;
+    let nome = document.getElementsByName('nome')[0];
+    let telefone = document.getElementsByName('telefone')[0];
+    let endereco = document.getElementsByName('endereco')[0];
 
-    document.getElementsByName('nome')[index].value = nome;
-    document.getElementsByName('telefone')[index].value = telefone;
-    document.getElementsByName('endereco')[index].value = endereco;
+    let section = document.querySelectorAll('section');
 }
 
 function excluir(index)

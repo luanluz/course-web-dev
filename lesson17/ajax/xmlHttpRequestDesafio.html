@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Marcas de Carros</h1>
+
+    <script>
+        // ...
+        function ajax(config)
+        {
+            // objeto padronizado - suportado pelos principais browsers
+            const xhr = new XMLHttpRequest();
+
+            xhr.open(config.metodo, config.url, true);
+
+
+            // Tratamento para erros
+            // Funlão para verificação de códigos de erro
+            xhr.onload = e =>
+            {
+                if(xhr.status === 200)
+                {
+                    config.sucesso(xhr.response);
+                }
+                else if(xhr.status >= 400)
+                {
+                    config.erro({ codigo: xhr.status, texto: xhr.statusText});
+                }
+            }
+
+            xhr.send();
+        }
+
+        function criar_tabela(carros)
+        {
+            const linhas = carros.map(
+                carro => {
+
+                    // Criando colunas
+                    const tdId = document.createElement('td');
+                    tdId.innerHTML = carro.id;
+
+                    const tdNome = document.createElement('td');
+                    tdNome.innerHTML = carro.name;
+
+                    const tdSigla = document.createElement('td');
+                    tdSigla.innerHTML = carro.key;
+
+                    const tr = document.createElement('tr');
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdNome);
+                    tr.appendChild(tdSigla);
+
+                    return tr;
+                }
+            );
+
+            const tabela = document.createElement('table');
+
+            linhas.forEach(linha => tabela.appendChild(linha));
+
+            document.body.appendChild(tabela);
+        }
+
+        ajax({
+            url: "dados/marcas-carros.json",
+            metodo: "get",
+            sucesso(resposta)
+            {
+                const carros = JSON.parse(resposta);
+                criar_tabela(carros);
+            },
+            error(e)
+            {
+                const msg = document.createTextNode(`${e.codigo}: ${e.texto}`);
+                document.body.appendChild(msg);
+            }
+        });
+    </script>
+</body>
