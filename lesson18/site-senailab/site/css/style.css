@@ -1,0 +1,115 @@
+/* Resetando padrões de estilo */
+*
+{
+    padding: 0;
+}
+
+/* Setando estilo ao corpo */
+body
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+body, html
+{
+    height: 100%;
+}
+
+/* Removendo sublinhado de todas as tags a */
+a
+{
+    text-decoration: none;
+}
+
+/* Setando estilo ao menu nav e toggle */
+.navbar
+{
+    position: fixed; /*setando posição*/
+    display: flex; /*definindo direção dos itens*/
+    width: 100%; /*definindo largura máxima*/
+    flex-wrap: wrap; /*quebrando a linha quando não há mais espaço*/
+    align-items:center; /*centralizando os itens*/
+    justify-content: space-between; /*alinhando os itens entre eles*/
+    padding: .2rem 0; /*definindo padding para altura e largura*/
+    background-color: #fff; /*definindo cor de fundo*/
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1); /*definindo sombra*/
+}
+
+/* Definindo direção dos itens para a tag ul */
+.navbar ul
+{
+    padding: 0 2rem;
+    display: flex;
+}
+
+/* Removendo estilo da tag li */
+.navbar li
+{
+    list-style: none;
+}
+
+/* Definindo padding somente aos lados */
+.navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor da tag a */
+.navbar-itens a
+{
+    color: rgba(0, 102, 179, 1);
+    font-weight: 600;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.navbar-itens i
+{
+    color: rgba(248, 155, 42, 1);
+    padding-left: .5em;
+}
+
+/* Setando tamanho máximo para a logo*/
+.logo img
+{
+    padding: 0 2rem;
+    max-height: 30px;
+}
+
+/* Definindo estilo do botão */
+.button
+{
+    padding: 7px; /*definindo espaçamento interno para o botão*/
+    border: solid 1px rgba(0, 102, 179, 1); /*adicionado borda ao botão*/
+    border-radius: 5px; /*aredondando os cantos do botão*/
+}
+
+/* Definindo estilo do botão quando tiver o mouse em cima */
+.button:hover
+{
+    color: #fff; /*definindo cor da fonte*/
+    background-color: rgba( 63, 161, 76, 0.75); /*definindo cor de fundo*/
+}
+
+.banner-senai
+{
+    background-position: center;
+    background-size: cover;
+    background-image: url("../assets/img/banner.png");
+    min-height: 100%;
+  }
+
+@media (max-width: 600px)
+{
+    .navbar{padding: .8em 2em;}
+    .toggle-menu{display: block}
+    .navbar-itens{display: none}
+}
+
+@media (min-width: 600px)
+{
+    .navbar-itens{display: block}
+    .toggle-menu{display: none}
+}
