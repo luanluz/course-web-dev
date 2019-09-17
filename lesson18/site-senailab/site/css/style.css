@@ -9,13 +9,9 @@ body
 {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #fcfcfc;
     box-sizing: border-box;
-}
-
-body, html
-{
-    height: 100%;
+    height: 100vh;
 }
 
 /* Removendo sublinhado de todas as tags a */
@@ -34,7 +30,7 @@ a
     align-items:center; /*centralizando os itens*/
     justify-content: space-between; /*alinhando os itens entre eles*/
     padding: .2rem 0; /*definindo padding para altura e largura*/
-    background-color: #fff; /*definindo cor de fundo*/
+    background-color: rgba(255, 255, 255, 0.95); /*definindo cor de fundo*/
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1); /*definindo sombra*/
 }
 
@@ -93,23 +89,87 @@ a
     background-color: rgba( 63, 161, 76, 0.75); /*definindo cor de fundo*/
 }
 
-.banner-senai
+.background-banner
 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("../assets/img/banner.png");
     min-height: 100%;
-  }
+    background-image: url('../assets/img/banner/shape-roxo.png'), url('../assets/img/banner/shape-laranja.png');
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.banner-senailab
+{
+    min-height: 70%;
+    background-image: url('../assets/img/banner/senailab_ideia-acao.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main
+{
+    min-height: 50%;
+    background-color: aqua;
+}
+
+
+.bottom-navbar
+{
+    position: fixed; /*setando posição*/
+    display: flex; /*definindo direção dos itens*/
+    width: 100%; /*definindo largura máxima*/
+    bottom: 0;
+    align-items: center; /*centralizando os itens*/
+    justify-content: center; /*alinhando os itens entre eles*/
+    padding: .2rem 0; /*definindo padding para altura e largura*/
+    background-color: rgba(255, 255, 255, 0.95); /*definindo cor de fundo*/
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1); /*definindo sombra*/
+}
+
+/* Definindo direção dos itens para a tag ul */
+.bottom-navbar ul
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /*alinhando os itens entre eles*/
+}
+
+/* Removendo estilo da tag li */
+.bottom-navbar li
+{
+    list-style: none;
+}
+
+/* Definindo padding somente aos lados */
+.bottom-navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.bottom-navbar-itens i
+{
+    color: rgba(248, 155, 42, 1);
+    padding-left: .5em;
+}
+
+footer
+{
+    min-height: 20%;
+    background-color: black;
+}
 
 @media (max-width: 600px)
 {
-    .navbar{padding: .8em 2em;}
-    .toggle-menu{display: block}
-    .navbar-itens{display: none}
+    .navbar{padding: .8em 2em; justify-content: center;}
+    .toggle-menu{display: block;}
+    .navbar-itens{display: none;}
+    .banner-senailab{ min-height: 50%};
+    .bottom-navigation{display: block;}
 }
 
 @media (min-width: 600px)
 {
-    .navbar-itens{display: block}
-    .toggle-menu{display: none}
+    .navbar-itens{display: block;}
+    .bottom-navigation{display: none;}
 }
