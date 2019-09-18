@@ -156,7 +156,8 @@ main
 footer
 {
     min-height: 20%;
-    background-color: black;
+    background-color: #f8f9fa;
+    color: #545454;
 }
 
 @media (max-width: 600px)

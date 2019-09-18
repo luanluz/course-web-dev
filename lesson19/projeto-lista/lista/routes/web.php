@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', ['uses' => 'Controller@teste']);
+Route::resource('/lista', 'ListaController');
 
-Route::get('/teste', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });

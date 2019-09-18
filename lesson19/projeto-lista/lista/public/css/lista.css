@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 70px;
+    grid-template-areas: 'cabecalho' 'conteudo' 'rodape';
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+header
+{
+    grid-area: cabecalho;
+    font-size: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 15px rgba(95, 95, 95, 0.25);
+}
+
+header h1
+{
+    color: deepskyblue;
+    text-transform: uppercase;
+    padding: .2em 0;
+}
+
+main
+{
+    grid-area: conteudo;
+    display: flex;
+    justify-content: center;
+}
+
+footer
+{
+    grid-area: rodape;
+    background-color: rgba(238, 238, 238, 0.5);
+    text-align: center;
+    padding: 15px 0;
+    color: rgb(110, 110, 110);
+
+}
+
+div { flex: 1; } 
+
+.form
+{
+   display: flex;
+   flex-direction: column;
+   font-size: 1em;
+   padding: 20px;
+}
+
+label
+{
+    font-size: 1em;
+    padding: 15px 0px;
+    color: rgb(95, 95, 95);
+}
+
+input
+{
+    padding: 10px;
+    font-size: 1.2em;
+    color: deepskyblue;
+    background-color: rgba(238, 238, 238, 0.75);
+    border-radius: 5px;
+}
+
+input:focus
+{
+    outline-width: 0;
+    border-radius: 5px;
+    background-color: rgb(238, 238, 238);
+}
+
+input:enabled
+{
+    border-style: none;
+}
+
+::-webkit-input-placeholder
+{
+    color: rgb(185, 185, 185);
+}
+
+#idade
+{
+    width: 15%;
+    text-align: center;
+}
+
+#telefone
+{
+    width: 50%;
+}
+
+.lista
+{
+    text-align: center;
+    color: rgb(160, 160, 160);
+}
+
+.lista, .form
+{
+    border-left: solid 1px rgba(155, 155, 155, 0.25);
+    margin-bottom: 5px;
+}
+
+li
+{
+    display: inline-block;
+}
+
+.form a
+{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(95, 95, 95, 0.25);
+}
+
+.form a:hover
+{
+    background-color: rgb(0, 180, 240);
+}
+
+.form a:active
+{
+    box-shadow: none;
+}
+
+@media(max-width: 600px)
+{
+    main { flex-direction: column; }
+
+    header { font-size: 100%; }
+
+    header h1 { padding: .4em 0; }
+    
+    .form
+    {
+        border-right: none;
+        margin-bottom: 0px;
+     }
+
+    .lista
+    {
+        border-right: none;
+        border-top: solid 1px rgba(155, 155, 155, 0.25);
+        margin-bottom: 5px;    
+    }
+}
+
+/*depois que tiver feito o javascript*/
+ul
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px rgba(155, 155, 155, 0.25);
+    border-radius: 5px;
+    margin: 10px;
+}
+ 
+li
+{   
+    flex: 1;
+    padding: 5px;
+}
+
+li a
+{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    font-size: 70%;
+    padding: 5px;
+    margin: 20px;
+    background-color: rgba(0, 180, 240, 0.15);
+    border-radius: 5px;
+}
+
+li a:hover
+{
+    background-color: rgba(0, 180, 240, 0.25);
+}
+
+span:nth-child(odd)
+{
+    /*pares even*/
+    color: rgb(190, 190, 190);
+}
+
+span:nth-child(even)
+{
+    /*pares even*/
+    font-weight: bold;
+    color: rgb(165, 165, 165);
+}
+
+li
+{
+    padding: 15px;
+}
+
+li:nth-child(odd)
+{
+    padding: 15px;
+    background-color: rgba(238, 238, 238, 0.75);
+}
