@@ -20,6 +20,11 @@ a
     text-decoration: none;
 }
 
+header
+{
+    background-color: #fff;
+}
+
 /* Setando estilo ao menu nav e toggle */
 .navbar
 {
@@ -60,6 +65,12 @@ a
     font-weight: 600;
 }
 
+.navbar-itens a:hover
+{
+    color: rgba(0, 102, 179, .5);
+    font-weight: 600;
+}
+
 /* Definindo cor dos ícones e o espaçamento deles */
 .navbar-itens i
 {
@@ -67,11 +78,56 @@ a
     padding-left: .5em;
 }
 
+.navbar-itens i:hover
+{
+    color: rgba(248, 155, 42, .5);
+    padding-left: .5em;
+}
+
 /* Setando tamanho máximo para a logo*/
+.logo a
+{
+    display: flex;
+}
+
 .logo img
 {
-    padding: 0 2rem;
-    max-height: 30px;
+    padding-left: 2rem;
+    height: 30px;
+}
+
+.logo svg
+{
+    height: 30px;
+}
+
+.animate-lab
+{
+    stroke-width: 2px;
+    stroke: #e49f3b;
+    width: 100%;
+    height: 100%;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: animatelab 3s ease-in-out forwards;
+}
+
+@keyframes animatelab
+{
+    0%
+    {
+        stroke-dashoffset: 1000;
+    }
+
+    70%
+    {
+        stroke-dashoffset: 0;
+    }
+
+    100%
+    {
+        stroke-dashoffset: 0;
+    }
 }
 
 /* Definindo estilo do botão */
@@ -91,25 +147,20 @@ a
 
 .background-banner
 {
-    min-height: 100%;
-    background-image: url('../assets/img/banner/shape-roxo.png'), url('../assets/img/banner/shape-laranja.png');
-    background-position: left bottom, right bottom;
-    background-repeat: no-repeat, no-repeat;
-}
-
-.banner-senailab
-{
-    min-height: 70%;
-    background-image: url('../assets/img/banner/senailab_ideia-acao.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 60%;
+    background-image: url('../assets/img/banner/shape-roxo.png'),
+    url('../assets/img/banner/shape-laranja.png'),
+    url('../assets/img/banner/senailab_ideia-acao.png');
+    background-position: left bottom, right bottom, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 15%, 15%, contain;
+    background-position-y: 100%, 100%, 25px;
 }
 
 main
 {
     min-height: 50%;
-    background-color: aqua;
+    background-color: #f5f5f5;
 }
 
 
@@ -150,7 +201,6 @@ main
 .bottom-navbar-itens i
 {
     color: rgba(248, 155, 42, 1);
-    padding-left: .5em;
 }
 
 footer
@@ -165,7 +215,7 @@ footer
     .navbar{padding: .8em 2em; justify-content: center;}
     .toggle-menu{display: block;}
     .navbar-itens{display: none;}
-    .banner-senailab{ min-height: 50%};
+    .background-banner{height: 40%; background-size: 20%, 20%, contain; background-position-y: 100%, 100%, 30px;};
     .bottom-navigation{display: block;}
 }
 
@@ -174,3 +224,8 @@ footer
     .navbar-itens{display: block;}
     .bottom-navigation{display: none;}
 }
+
+/* 
+    https://imasters.com.br/back-end/como-criar-uma-estrutura-de-diretorios-organizada-para-seus-modulos-temas-e-bibliotecas
+    https://medium.com/tableless/criando-o-meu-novo-site-3-planejando-o-desenvolvimento-e-a-automatização-187c4da7e958
+*/
