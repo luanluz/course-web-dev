@@ -1,0 +1,233 @@
+/* Resetando padrões de estilo */
+*
+{
+    padding: 0;
+}
+
+/* Setando estilo ao corpo */
+body
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* Removendo sublinhado de todas as tags a */
+a
+{
+    text-decoration: none;
+}
+
+/* Setando estilo ao menu nav e toggle */
+.navbar
+{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+    padding: .2rem 0;
+}
+
+/* Definindo direção dos itens para a tag ul */
+.navbar ul
+{
+    padding: 0 2rem;
+    display: flex;
+}
+
+/* Removendo estilo da tag li */
+.navbar li
+{
+    list-style: none;
+}
+
+#inicio::after
+{
+    content: '';
+    width: 75%;
+    height: 4px;
+    background-color: rgba(221, 221, 221, 0.25);
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+li:hover
+{
+    opacity: .75;
+}
+
+/* Definindo padding somente aos lados */
+.navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor da tag a */
+.navbar-itens a
+{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    letter-spacing: .09em;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.navbar-itens i
+{
+    padding-left: .5em;
+}
+
+/* Setando tamanho máximo para a logo*/
+.logo a
+{
+    display: flex;
+}
+
+.logo
+{
+    padding-left: 2rem;
+    height: 30px;
+}
+
+.logo svg
+{
+    height: 30px;
+}
+
+.st1
+{
+    stroke: #fff;
+}
+
+.cls-2
+{
+    fill: #fff;
+}
+
+.animate-lab
+{
+    stroke-width: 2px;
+    width: 100%;
+    height: 100%;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: animatelab 2s ease-in-out forwards;
+}
+
+@keyframes animatelab
+{
+    0%
+    {
+        stroke-dashoffset: 1000;
+    }
+
+    100%
+    {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Definindo estilo do botão */
+.button
+{
+    padding: 7px;
+    border: solid 1px rgba(0, 102, 179, 1);
+    border-radius: 5px;
+}
+
+/* Definindo estilo do botão quando tiver o mouse em cima */
+.button:hover
+{
+    color: #fff;
+    background-color: rgba( 63, 161, 76, 0.75);
+}
+
+/* menu sticky*/
+.sticky 
+{
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.cls-2-colored{fill: #005caa;}
+
+.st1-colored{stroke: #e49f3b;}
+
+
+main
+{
+    min-height: 90%;
+    background-color: #e49f3b;
+}
+
+
+.bottom-navbar
+{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Definindo direção dos itens para a tag ul */
+.bottom-navbar ul
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Removendo estilo da tag li */
+.bottom-navbar li
+{
+    list-style: none;
+}
+
+/* Definindo padding somente aos lados */
+.bottom-navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.bottom-navbar-itens i
+{
+    color: rgba(248, 155, 42, 1);
+}
+
+footer
+{
+    min-height: 30%;
+    background-color: #f8f9fa;
+    color: #545454;
+}
+
+@media (max-width: 600px)
+{
+    .navbar{padding: .8em 2em; justify-content: center;}
+    .toggle-menu{display: block;}
+    .navbar-itens{display: none;}
+    .bottom-navigation{display: block;}
+    main{min-height: 100%;}
+}
+
+@media (min-width: 600px)
+{
+    .navbar-itens{display: block;}
+    .bottom-navigation{display: none;}
+}
+
+/* 
+    https://imasters.com.br/back-end/como-criar-uma-estrutura-de-diretorios-organizada-para-seus-modulos-temas-e-bibliotecas
+    https://medium.com/tableless/criando-o-meu-novo-site-3-planejando-o-desenvolvimento-e-a-automatização-187c4da7e958
+*/
