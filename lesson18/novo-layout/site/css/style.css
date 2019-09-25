@@ -97,12 +97,12 @@ li:hover
     height: 30px;
 }
 
-.st1
+.header-lab
 {
     stroke: #fff;
 }
 
-.cls-2
+.header-senai
 {
     fill: #fff;
 }
@@ -130,21 +130,6 @@ li:hover
     }
 }
 
-/* Definindo estilo do botão */
-.button
-{
-    padding: 7px;
-    border: solid 1px rgba(0, 102, 179, 1);
-    border-radius: 5px;
-}
-
-/* Definindo estilo do botão quando tiver o mouse em cima */
-.button:hover
-{
-    color: #fff;
-    background-color: rgba( 63, 161, 76, 0.75);
-}
-
 /* menu sticky*/
 .sticky 
 {
@@ -154,17 +139,21 @@ li:hover
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
 }
 
-.cls-2-colored{fill: #005caa;}
+.header-senai-colored{fill: #2980b9;}
 
-.st1-colored{stroke: #e49f3b;}
+.header-lab-colored{stroke: #e49f3b;}
 
+.content-page
+{
+    max-width: 900px;
+    margin: auto;
+}
 
 main
 {
-    min-height: 90%;
+    min-height: 70%;
     background-color: #e49f3b;
 }
-
 
 .bottom-navbar
 {
@@ -200,17 +189,126 @@ main
 }
 
 /* Definindo cor dos ícones e o espaçamento deles */
-.bottom-navbar-itens i
+.bottom-navbar-itens a
 {
     color: rgba(248, 155, 42, 1);
 }
 
 footer
 {
-    min-height: 30%;
+    min-height: 20%;
     background-color: #f8f9fa;
-    color: #545454;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
+
+.footer-top
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Definindo estilo do botão */
+.button-footer
+{
+    height: 10%;
+    padding: 10px;
+    border: solid 1px #a0a0a0;
+    border-radius: 5px;
+    color: #a0a0a0;
+    font-weight: 100;
+    font-size: .9em;
+}
+
+/* Definindo estilo do botão quando tiver o mouse em cima */
+.button-footer:hover
+{
+    color: #fff;
+    background-color: #b6b6b6;
+}
+
+.divider
+{
+    content: '';
+    width: 75%;
+    height: 1px;
+    background-color: rgba(221, 221, 221, .8);
+    display: block;
+    margin: 25px auto;
+}
+
+.address
+{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #838383;
+    text-align: center;
+    font-style: normal;
+    width: 50%;
+}
+
+.address p
+{
+    margin: 0;
+}
+
+.footer-bottom
+{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.footer-senailab-logo
+{
+    max-height: 30px;
+    display: flex;
+}
+
+.footer-senailab-logo svg, img
+{
+    height: 30px;
+}
+
+.senai-logo
+{
+    margin-right: 5%;
+}
+
+.footer-lab
+{
+    stroke: #b1b1b1;
+}
+
+.footer-senai
+{
+    fill: #a0a0a0;
+}
+
+.coded-by
+{
+    color: #a0a0a0;
+    font-style: oblique;
+    font-size: .9em;
+    font-weight: 100;
+}
+
+.coded-by i
+{
+    padding: 0 5px;
+    color: #bebebe;
+}
+
+.coded-by a
+{
+    margin-left: 5px;
+    color: #fff;
+    padding: 5px;
+    background-color: #bebebe;
+    border-radius: 3px;
+    font-weight: 100;
+}
+
 
 @media (max-width: 600px)
 {
@@ -219,6 +317,8 @@ footer
     .navbar-itens{display: none;}
     .bottom-navigation{display: block;}
     main{min-height: 100%;}
+    .footer-top{display: flex; flex-direction: column; width: 50%;}
+    .footer-bottom{flex-direction: column;}
 }
 
 @media (min-width: 600px)

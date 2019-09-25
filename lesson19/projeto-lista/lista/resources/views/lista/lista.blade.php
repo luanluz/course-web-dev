@@ -14,7 +14,7 @@
         <h1>Lista Dinâmica</h1>
     </header>
     <main>
-        <div class="form">
+        <form class="form" method="POST">
             <label>Nome:</label>
             <input id="nome" type="text" placeholder="Digite o nome">
             <label>Idade:</label>
@@ -22,7 +22,7 @@
             <label>Telefone:</label>
             <input id="telefone" type="text" placeholder="(00) 90000-0000">
             <a href="#" onclick="salvar()">SALVAR</a>
-        </div>
+        </form>
         <div class="lista">
             <ul>
                 <li class="li-title">
