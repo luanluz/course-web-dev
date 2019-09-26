@@ -1,0 +1,333 @@
+/* Resetando padrões de estilo */
+*
+{
+    padding: 0;
+}
+
+/* Setando estilo ao corpo */
+body
+{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* Removendo sublinhado de todas as tags a */
+a
+{
+    text-decoration: none;
+}
+
+/* Setando estilo ao menu nav e toggle */
+.navbar
+{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-between;
+    padding: .2rem 0;
+}
+
+/* Definindo direção dos itens para a tag ul */
+.navbar ul
+{
+    padding: 0 2rem;
+    display: flex;
+}
+
+/* Removendo estilo da tag li */
+.navbar li
+{
+    list-style: none;
+}
+
+#inicio::after
+{
+    content: '';
+    width: 75%;
+    height: 4px;
+    background-color: rgba(221, 221, 221, 0.25);
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+li:hover
+{
+    opacity: .75;
+}
+
+/* Definindo padding somente aos lados */
+.navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor da tag a */
+.navbar-itens a
+{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    letter-spacing: .09em;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.navbar-itens i
+{
+    padding-left: .5em;
+}
+
+/* Setando tamanho máximo para a logo*/
+.logo a
+{
+    display: flex;
+}
+
+.logo
+{
+    padding-left: 2rem;
+    height: 30px;
+}
+
+.logo svg
+{
+    height: 30px;
+}
+
+.header-lab
+{
+    stroke: #fff;
+}
+
+.header-senai
+{
+    fill: #fff;
+}
+
+.animate-lab
+{
+    stroke-width: 2px;
+    width: 100%;
+    height: 100%;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    animation: animatelab 2s ease-in-out forwards;
+}
+
+@keyframes animatelab
+{
+    0%
+    {
+        stroke-dashoffset: 1000;
+    }
+
+    100%
+    {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* menu sticky*/
+.sticky 
+{
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.header-senai-colored{fill: #2980b9;}
+
+.header-lab-colored{stroke: #e49f3b;}
+
+.content-page
+{
+    max-width: 900px;
+    margin: auto;
+}
+
+main
+{
+    min-height: 70%;
+    background-color: #f9f9f9;
+}
+
+.bottom-navbar
+{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Definindo direção dos itens para a tag ul */
+.bottom-navbar ul
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Removendo estilo da tag li */
+.bottom-navbar li
+{
+    list-style: none;
+}
+
+/* Definindo padding somente aos lados */
+.bottom-navbar-itens
+{
+    padding: 0 1.2rem;
+}
+
+/* Definindo cor dos ícones e o espaçamento deles */
+.bottom-navbar-itens a
+{
+    color: rgba(248, 155, 42, 1);
+}
+
+footer
+{
+    min-height: 20%;
+    background-color: #f8f9fa;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-top
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Definindo estilo do botão */
+.button-footer
+{
+    height: 10%;
+    padding: 10px;
+    border: solid 1px #a0a0a0;
+    border-radius: 5px;
+    color: #a0a0a0;
+    font-weight: 100;
+    font-size: .9em;
+}
+
+/* Definindo estilo do botão quando tiver o mouse em cima */
+.button-footer:hover
+{
+    color: #fff;
+    background-color: #b6b6b6;
+}
+
+.divider
+{
+    content: '';
+    width: 75%;
+    height: 1px;
+    background-color: rgba(221, 221, 221, .8);
+    display: block;
+    margin: 25px auto;
+}
+
+.address
+{
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #838383;
+    text-align: center;
+    font-style: normal;
+    width: 50%;
+}
+
+.address p
+{
+    margin: 0;
+}
+
+.footer-bottom
+{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.footer-senailab-logo
+{
+    max-height: 30px;
+    display: flex;
+}
+
+.footer-senailab-logo svg, img
+{
+    height: 30px;
+}
+
+.senai-logo
+{
+    margin-right: 5%;
+}
+
+.footer-lab
+{
+    stroke: #b1b1b1;
+}
+
+.footer-senai
+{
+    fill: #a0a0a0;
+}
+
+.coded-by
+{
+    color: #a0a0a0;
+    font-style: oblique;
+    font-size: .9em;
+    font-weight: 100;
+}
+
+.coded-by i
+{
+    padding: 0 5px;
+    color: #bebebe;
+}
+
+.coded-by a
+{
+    margin-left: 5px;
+    color: #fff;
+    padding: 5px;
+    background-color: #bebebe;
+    border-radius: 3px;
+    font-weight: 100;
+}
+
+
+@media (max-width: 600px)
+{
+    .navbar{padding: .8em 2em; justify-content: center;}
+    .toggle-menu{display: block;}
+    .navbar-itens{display: none;}
+    .bottom-navigation{display: block;}
+    main{min-height: 100%;}
+    .footer-top{display: flex; flex-direction: column; width: 50%;}
+    .footer-bottom{flex-direction: column;}
+}
+
+@media (min-width: 600px)
+{
+    .navbar-itens{display: block;}
+    .bottom-navigation{display: none;}
+}
+
+/* 
+    https://imasters.com.br/back-end/como-criar-uma-estrutura-de-diretorios-organizada-para-seus-modulos-temas-e-bibliotecas
+    https://medium.com/tableless/criando-o-meu-novo-site-3-planejando-o-desenvolvimento-e-a-automatização-187c4da7e958
+*/

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/logo/favicon.png" type="image/x-icon">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/assets/logo/favicon.png" type="image/x-icon">
+    <link href="/lib/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Cookie|Roboto:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -115,25 +115,24 @@
                 </a>
             </div>
             <ul class="menu">
-                <li id="inicio" class="navbar-itens"> <a href="#">Início<i class="fa fa-home"></i></a></li>
-                <li id="projetos" class="navbar-itens"> <a href="#">Projetos<i class="fa fa-tools"></i></a></li>
-                <li id="equipe" class="navbar-itens"> <a href="#">Equipe<i class="fa fa-users"></i></a></li>
-                <li id="sobre" class="navbar-itens"> <a href="#">Sobre<i class="fa fa-info"></i></a></li>
+                <li id="inicio" class="navbar-itens"> <a href="/">Início<i class="fa fa-home"></i></a></li>
+                <li id="projetos" class="navbar-itens"> <a href="projects">Projetos<i class="fa fa-tools"></i></a></li>
+                <li id="equipe" class="navbar-itens"> <a href="team">Equipe<i class="fa fa-users"></i></a></li>
+                <li id="sobre" class="navbar-itens"> <a href="about">Sobre<i class="fa fa-info"></i></a></li>
             </ul>
         </nav>
 
     </header>
 
-    <main class="main">
-    </main>
+    {{{ body }}}
 
     <div class="bottom-navigation">
         <nav class="bottom-navbar">
             <ul>
-                <li class="bottom-navbar-itens"><a href="#"><i class="fa fa-home"></i></a></li>
-                <li class="bottom-navbar-itens"><a href="#"><i class="fa fa-tools"></i></a></li>
-                <li class="bottom-navbar-itens"><a href="#"><i class="fa fa-users"></i></a></li>
-                <li class="bottom-navbar-itens"><a href="#"><i class="fa fa-info"></i></a></li>
+                <li class="bottom-navbar-itens"><a href="/"><i class="fa fa-home"></i></a></li>
+                <li class="bottom-navbar-itens"><a href="projects"><i class="fa fa-tools"></i></a></li>
+                <li class="bottom-navbar-itens"><a href="team"><i class="fa fa-users"></i></a></li>
+                <li class="bottom-navbar-itens"><a href="about"><i class="fa fa-info"></i></a></li>
             </ul>
         </nav>
     </div>
@@ -262,7 +261,7 @@
         </div>
     </footer>
 
-    <script src="js/controller.js"></script>
+    <script src="/lib/js/senailab.js"></script>
 </body>
 
 </html>
