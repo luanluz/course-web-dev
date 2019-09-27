@@ -9,7 +9,7 @@ body
 {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #ececec;
     box-sizing: border-box;
     height: 100vh;
 }
@@ -45,19 +45,19 @@ a
     list-style: none;
 }
 
-#inicio::after
+li:hover
+{
+    opacity: .75;
+}
+
+.navbar li.active::after
 {
     content: '';
     width: 75%;
     height: 4px;
-    background-color: rgba(221, 221, 221, 0.25);
+    background-color: rgba(221, 221, 221, .5);
     display: block;
     margin: 10px auto 0 auto;
-}
-
-li:hover
-{
-    opacity: .75;
 }
 
 /* Definindo padding somente aos lados */
@@ -182,6 +182,16 @@ main
     list-style: none;
 }
 
+.bottom-navbar li.active::after
+{
+    content: '';
+    width: 75%;
+    height: 4px;
+    background-color: rgb(211, 211, 211);
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
 /* Definindo padding somente aos lados */
 .bottom-navbar-itens
 {
@@ -197,7 +207,6 @@ main
 footer
 {
     min-height: 20%;
-    background-color: #f8f9fa;
     margin-top: 25px;
     margin-bottom: 20px;
 }
@@ -239,6 +248,7 @@ footer
 
 .address
 {
+    margin: auto 0;
     font-size: 0.9em;
     font-weight: 300;
     color: #838383;
@@ -287,10 +297,16 @@ footer
 
 .coded-by
 {
+    margin: auto 0;
     color: #a0a0a0;
     font-style: oblique;
     font-size: .9em;
     font-weight: 100;
+}
+
+.coded-by p
+{
+    margin: 0;
 }
 
 .coded-by i
@@ -317,8 +333,14 @@ footer
     .navbar-itens{display: none;}
     .bottom-navigation{display: block;}
     main{min-height: 100%;}
-    .footer-top{display: flex; flex-direction: column; width: 50%;}
-    .footer-bottom{flex-direction: column;}
+    .footer-top{display: flex; flex-direction: column; width: 75%;}
+    .address{width: 100%; padding-bottom: 15px;}
+    .button-footer{margin: 10px 0;}
+    .footer-bottom{flex-direction: column; margin-bottom: 25%;}
+    .footer-senailab-logo{width: 100%; justify-content: center;}
+    .footer-senailab-logo svg, img{height: 20px;}
+    .coded-by{margin: auto}
+    .coded-by p{margin: 25px 0;}
 }
 
 @media (min-width: 600px)

@@ -5,12 +5,13 @@ colors[0] = "#2980b9";
 colors[1] = "#f39c12";
 colors[2] = "#27ae60";
 colors[3] = "#8e44ad";
-colors[4] = "#f7ca18";
+colors[4] = "#f3c13a";
 
 var color = Math.floor(Math.random() * colors.length);
 
 var main = document.getElementsByClassName("main");
-main[0].style.backgroundColor = colors[color];
+    if(main.length != 0)
+        main[0].style.backgroundColor = colors[color];
 
 /* ------------- Change color of bottom navigation items ------------- */
 document.getElementsByClassName("bottom-navbar-itens")[0].childNodes[0].style.color = colors[color];
@@ -43,9 +44,9 @@ function stickyNavbar()
         lab.classList.add("header-lab-colored");
         senai.classList.add("header-senai-colored");
         li_inicio.childNodes[1].style.color = colors[color];
-        li_projetos.childNodes[1].style.color = colors[color];
-        li_equipe.childNodes[1].style.color = colors[color];
-        li_sobre.childNodes[1].style.color = colors[color];
+        li_projetos.childNodes[0].style.color = colors[color];
+        li_equipe.childNodes[0].style.color = colors[color];
+        li_sobre.childNodes[0].style.color = colors[color];
     }
     else
     {
@@ -55,8 +56,8 @@ function stickyNavbar()
         lab.classList.add("header-lab");
         senai.classList.add("header-senai");
         li_inicio.childNodes[1].style.color = "#fff";
-        li_projetos.childNodes[1].style.color = "#fff";
-        li_equipe.childNodes[1].style.color = "#fff";
-        li_sobre.childNodes[1].style.color = "#fff";
+        li_projetos.childNodes[0].style.color = "#fff";
+        li_equipe.childNodes[0].style.color = "#fff";
+        li_sobre.childNodes[0].style.color = "#fff";
     }
 }
