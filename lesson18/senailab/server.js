@@ -18,7 +18,4 @@ app.use(function(req, res, next)
 });
 
 // Iniciando servidor
-app.listen(3000, function(req, res)
-{
-    console.log(' Servidor rodando.');
-});
+app.listen(3000, function(req, res){});

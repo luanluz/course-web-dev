@@ -26,6 +26,12 @@ router.get("/projects", function(req, res)
     res.render('projects');
 });
 
+// Projeto
+router.get("/project/:id", function(req, res)
+{
+    res.render('project');
+});
+
 // Equipe
 router.get("/team", function(req, res)
 {

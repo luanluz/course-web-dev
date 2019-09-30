@@ -1,3 +1,4 @@
+/* ---------------------------- ESTILO GERAL ---------------------------- */
 /* Resetando padrões de estilo */
 *
 {
@@ -15,11 +16,12 @@ body
 }
 
 /* Removendo sublinhado de todas as tags a */
-a
-{
-    text-decoration: none;
-}
+a{text-decoration: none;}
 
+/* Removendo margens do elementos */
+h1, p {margin: 0}
+
+/* ---------------------------- HEADER ---------------------------- */
 /* Setando estilo ao menu nav e toggle */
 .navbar
 {
@@ -30,6 +32,7 @@ a
     align-items:center;
     justify-content: space-between;
     padding: .2rem 0;
+    z-index: 5;
 }
 
 /* Definindo direção dos itens para a tag ul */
@@ -40,16 +43,12 @@ a
 }
 
 /* Removendo estilo da tag li */
-.navbar li
-{
-    list-style: none;
-}
+.navbar li{list-style: none;}
 
-li:hover
-{
-    opacity: .75;
-}
+/* Definindo opacidade do elemento ao passar o mouse em cima */
+li:hover{opacity: .5;}
 
+/* Definindo linha em baixo do elemento. Indicador de página */
 .navbar li.active::after
 {
     content: '';
@@ -58,55 +57,48 @@ li:hover
     background-color: rgba(221, 221, 221, .5);
     display: block;
     margin: 10px auto 0 auto;
+    animation: pageindicator .3s ease-in-out forwards;
 }
 
 /* Definindo padding somente aos lados */
-.navbar-itens
-{
-    padding: 0 1.2rem;
-}
+.navbar-itens{padding: 0 1.2rem;}
 
 /* Definindo cor da tag a */
 .navbar-itens a
 {
-    color: rgba(255, 255, 255, 1);
+    color: #fff;
     font-weight: 500;
     letter-spacing: .09em;
 }
 
+/* Definindo cor da tag a, caso não esteja na home. Indicador de página */
+.navbar-itens a.pages{color: #a0a0a0;}
+
 /* Definindo cor dos ícones e o espaçamento deles */
-.navbar-itens i
-{
-    padding-left: .5em;
-}
+.navbar-itens i{padding-left: .5em;}
 
 /* Setando tamanho máximo para a logo*/
-.logo a
-{
-    display: flex;
-}
-
 .logo
 {
     padding-left: 2rem;
     height: 30px;
 }
 
-.logo svg
-{
-    height: 30px;
-}
+/* Definindo direção dos itens para a tag a */
+.logo a{display: flex;}
 
-.header-lab
-{
-    stroke: #fff;
-}
+/* Definindo tamanho para as tags svg */
+.logo svg{height: 30px;}
 
-.header-senai
-{
-    fill: #fff;
-}
+/* Definindo cores de preenchimento e contorno do senai e lab, respectivamente */
+.header-lab{stroke: #fff;}
+.header-senai{fill: #fff;}
+.header-senai-grey{fill: #a0a0a0;}
+.header-lab-grey{stroke: #b1b1b1;}
+.header-senai-colored{fill: #2980b9;}
+.header-lab-colored{stroke: #e49f3b;}
 
+/* Animando o contorno de lab da logo senailab */
 .animate-lab
 {
     stroke-width: 2px;
@@ -117,44 +109,412 @@ li:hover
     animation: animatelab 2s ease-in-out forwards;
 }
 
-@keyframes animatelab
-{
-    0%
-    {
-        stroke-dashoffset: 1000;
-    }
-
-    100%
-    {
-        stroke-dashoffset: 0;
-    }
-}
-
-/* menu sticky*/
+/* estilo do menu sticky */
 .sticky 
 {
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, .98);
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
 }
 
-.header-senai-colored{fill: #2980b9;}
-
-.header-lab-colored{stroke: #e49f3b;}
-
+/* ---------------------------- ESTILO GERAL PÁGINA ---------------------------- */
 .content-page
 {
     max-width: 900px;
     margin: auto;
 }
 
+.title-page
+{
+    color: rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+/* ---------------------------- MAIN ---------------------------- */
 main
 {
     min-height: 70%;
     background-color: #f9f9f9;
 }
 
+/* ---------------------------- SECAO - PROJETOS ---------------------------- */
+#projects
+{
+    padding: 10vh 0;
+}
+
+.projects-cards
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.project-card
+{
+    margin: 5px;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.project-card:hover
+{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
+}
+
+.project-img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-info
+{
+    align-items: center;
+}
+
+.project-name
+{
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.project-name::after
+{
+    content: '';
+    width: 75%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    margin: 10px auto;
+}
+
+.project-details
+{
+    color: rgba(0, 0, 0, .35);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.new-project-card
+{
+    margin: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: dashed 2px rgba(0, 0, 0, .35);
+    cursor: pointer;
+}
+
+.new-project-item
+{
+    min-height: 75px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.new-project-send
+{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, .35);
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+}
+
+/* ---------------------------- SECAO - PROJETO ---------------------------- */
+#project
+{
+    padding: 10vh 0;
+}
+
+.content-project
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-content-project
+{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-content-project img
+{
+    height: 100%;
+    max-height: 350px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.left-content-project button
+{
+    color: #a0a0a0;
+    font-weight: bold;
+    font-size: .9em;
+    text-transform: uppercase;
+    padding: 10px;
+    border: solid 1px #a0a0a0;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Definindo estilo do botão quando tiver o mouse em cima */
+.left-content-project button:hover
+{
+    color: #f9f9f9;
+    background-color: #a5a5a5;
+}
+
+.right-content-project
+{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-informations
+{
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.project-informations h4
+{
+    margin: 5px 0;
+    color: rgba(0, 0, 0, .5);
+}
+
+.project-informations span
+{
+    color: rgba(0, 0, 0, .5);
+    font-weight: 100;
+}
+
+.comments
+{
+    margin-top: 25px;
+}
+
+.coment
+{
+    margin: 5px 0;
+    background-color: #ececec;
+    border-radius: 5px;
+    padding: 10px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.coment span
+{
+    font-weight: 100;
+}
+
+.send-comment
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.send-comment input
+{
+    width: 60%;
+    color: rgba(0, 0, 0, .5);
+    border: none;
+    background-color: #ececec;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.send-comment button
+{
+    padding: 5px;
+    border: solid 1px #a0a0a0;
+    border-radius: 3px;
+    color: #a0a0a0;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.send-comment button:hover
+{
+    color: #f9f9f9;
+    background-color: #a5a5a5;
+}
+
+/* ---------------------------- SECAO - EQUIPE ---------------------------- */
+#team
+{
+    padding: 10vh 0;
+}
+
+.team-cards
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.member-card
+{
+    margin: 5px;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.member-card:hover
+{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .1);
+}
+
+.member-img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.member-info
+{
+    align-items: center;
+}
+
+.member-name
+{
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.member-name::after
+{
+    content: '';
+    width: 75%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    margin: 10px auto;
+}
+
+.member-function
+{
+    margin: 0;
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
+}
+
+/* ---------------------------- SECAO - SOBRE ---------------------------- */
+#about
+{
+    padding: 10vh 0;
+}
+
+.about-text
+{
+    color: rgba(0, 0, 0, .5);
+}
+
+/* ---------------------------- MODAL ---------------------------- */
+.modal-container
+{
+    width: 100vw;
+    height: 100vh;
+    background: rgba( 0, 0, 0, .25);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.show
+{
+    display: flex;
+}
+
+.modal
+{
+    border-radius: 5px;
+    background: #fdfdfd;
+    width: 75%;
+    min-width: 300px;
+    padding: 50px;
+    box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.modal i
+{
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #000;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    background: transparent;
+}
+
+.title-modal
+{
+    text-align: start;
+    color: rgba(0, 0, 0, .75);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.paragraph-modal
+{
+    width: 75%;
+    color: rgba(0, 0, 0, .65);
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+
+.show .modal
+{
+    animation: modal .3s;
+}
+
+/* ---------------------------- BOTTOM NAVBAR ---------------------------- */
+/* Setando estilo ao menu navbar inferior */
 .bottom-navbar
 {
     position: fixed;
@@ -166,6 +526,7 @@ main
     padding: .2rem 0;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1);
+    z-index: 5;
 }
 
 /* Definindo direção dos itens para a tag ul */
@@ -177,11 +538,9 @@ main
 }
 
 /* Removendo estilo da tag li */
-.bottom-navbar li
-{
-    list-style: none;
-}
+.bottom-navbar li{list-style: none;}
 
+/* Definindo linha em baixo do elemento. Indicador de página */
 .bottom-navbar li.active::after
 {
     content: '';
@@ -190,20 +549,20 @@ main
     background-color: rgb(211, 211, 211);
     display: block;
     margin: 10px auto 0 auto;
+    animation: pageindicator .3s ease-in-out forwards;
 }
 
 /* Definindo padding somente aos lados */
-.bottom-navbar-itens
-{
-    padding: 0 1.2rem;
-}
+.bottom-navbar-itens{padding: 0 1.2rem;}
 
-/* Definindo cor dos ícones e o espaçamento deles */
+/* Definindo cor dos ícones */
 .bottom-navbar-itens a
 {
-    color: rgba(248, 155, 42, 1);
+    color: #a0a0a0;
 }
 
+/* ---------------------------- FOOTER ---------------------------- */
+/* Setando tamanho e margem ao rodapé */
 footer
 {
     min-height: 20%;
@@ -211,6 +570,7 @@ footer
     margin-bottom: 20px;
 }
 
+/* Setando estilo ao rodapé superior */
 .footer-top
 {
     display: flex;
@@ -236,6 +596,7 @@ footer
     background-color: #b6b6b6;
 }
 
+/* Definindo estilo de linha para dividir o superior e inferior */
 .divider
 {
     content: '';
@@ -246,6 +607,7 @@ footer
     margin: 25px auto;
 }
 
+/* Definindo estilo do endereço */
 .address
 {
     margin: auto 0;
@@ -257,11 +619,10 @@ footer
     width: 50%;
 }
 
-.address p
-{
-    margin: 0;
-}
+/* Removendo margem do elemento p */
+.address p {margin: 0;}
 
+/* Setando estilo ao rodapé inferior */
 .footer-bottom
 {
     display: flex;
@@ -269,32 +630,24 @@ footer
     bottom: 0;
 }
 
+/* Definindo tamanho e direção das logos */
 .footer-senailab-logo
 {
     max-height: 30px;
     display: flex;
 }
 
-.footer-senailab-logo svg, img
-{
-    height: 30px;
-}
+/* Definindo tamanho das logos */
+.footer-senailab-logo svg, img {height: 30px;}
 
-.senai-logo
-{
-    margin-right: 5%;
-}
+/* Definindo margem a direta na logo do senai */
+.senai-logo {margin-right: 5%;}
 
-.footer-lab
-{
-    stroke: #b1b1b1;
-}
+/* Definindo cor de preenchimento e contorno do senai e lab, respectivamente */
+.footer-senai {fill: #a0a0a0;}
+.footer-lab {stroke: #b1b1b1;}
 
-.footer-senai
-{
-    fill: #a0a0a0;
-}
-
+/* Definindo estilo para o 'feito por' */
 .coded-by
 {
     margin: auto 0;
@@ -304,17 +657,14 @@ footer
     font-weight: 100;
 }
 
-.coded-by p
-{
-    margin: 0;
-}
-
+/* Definindo estilo para o elemento i no 'feito por' */
 .coded-by i
 {
     padding: 0 5px;
     color: #bebebe;
 }
 
+/* Definindo estilo para o elemento a no 'feito por' */
 .coded-by a
 {
     margin-left: 5px;
@@ -325,14 +675,96 @@ footer
     font-weight: 100;
 }
 
+/* ---------------------------- ANIMATIONS - HEADER ---------------------------- */
+/* Animando lab da logo do header */
+@keyframes animatelab
+{
+    0%
+    {
+        stroke-dashoffset: 1000;
+    }
 
+    100%
+    {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pageindicator
+{
+    from
+    {
+        width: 0;
+    }
+
+    to
+    {
+        width: 75%;
+    }
+}
+
+/* ---------------------------- ANIMATIONS - MODAL ---------------------------- */
+@keyframes modal
+{
+    from
+    {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* ---------------------------- MEDIA QUERIES - HEADER ---------------------------- */
 @media (max-width: 600px)
 {
     .navbar{padding: .8em 2em; justify-content: center;}
     .toggle-menu{display: block;}
     .navbar-itens{display: none;}
     .bottom-navigation{display: block;}
+    .logo{padding-left: 0;}
+}
+
+@media (min-width: 600px)
+{
+    .navbar-itens{display: block;}
+    .bottom-navigation{display: none;}
+}
+
+/* ---------------------------- MEDIA QUERIES - MAIN ---------------------------- */
+@media (max-width: 600px)
+{
     main{min-height: 100%;}
+    .content-page{max-width: 90%;}
+}
+
+/* ---------------------------- MEDIA QUERIES - PROJETOS ---------------------------- */
+@media (max-width: 600px)
+{
+    .projects-cards{grid-template-columns: auto;}
+}
+
+/* ---------------------------- MEDIA QUERIES - PROJETO ---------------------------- */
+@media (max-width: 600px)
+{
+    .content-project{display: flex; flex-direction: column;}
+    .left-content-project{margin: 0 auto; max-width: 100%;}
+    .right-content-project{ max-width: 100%; margin-top: 5vh;}
+    .send-comment input{width: 65%;}
+}
+
+/* ---------------------------- MEDIA QUERIES - EQUIPE ---------------------------- */
+@media (max-width: 600px)
+{
+    .team-cards{grid-template-columns: auto;}
+}
+
+/* ---------------------------- MEDIA QUERIES - FOOTER ---------------------------- */
+@media (max-width: 600px)
+{
     .footer-top{display: flex; flex-direction: column; width: 75%;}
     .address{width: 100%; padding-bottom: 15px;}
     .button-footer{margin: 10px 0;}
@@ -341,12 +773,6 @@ footer
     .footer-senailab-logo svg, img{height: 20px;}
     .coded-by{margin: auto}
     .coded-by p{margin: 25px 0;}
-}
-
-@media (min-width: 600px)
-{
-    .navbar-itens{display: block;}
-    .bottom-navigation{display: none;}
 }
 
 /* 

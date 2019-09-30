@@ -14,10 +14,10 @@ var main = document.getElementsByClassName("main");
         main[0].style.backgroundColor = colors[color];
 
 /* ------------- Change color of bottom navigation items ------------- */
-document.getElementsByClassName("bottom-navbar-itens")[0].childNodes[0].style.color = colors[color];
-document.getElementsByClassName("bottom-navbar-itens")[1].childNodes[0].style.color = colors[color];
-document.getElementsByClassName("bottom-navbar-itens")[2].childNodes[0].style.color = colors[color];
-document.getElementsByClassName("bottom-navbar-itens")[3].childNodes[0].style.color = colors[color];
+document.getElementsByClassName("bottom-navbar-itens")[0].childNodes[1].style.color = colors[color];
+document.getElementsByClassName("bottom-navbar-itens")[1].childNodes[1].style.color = colors[color];
+document.getElementsByClassName("bottom-navbar-itens")[2].childNodes[1].style.color = colors[color];
+document.getElementsByClassName("bottom-navbar-itens")[3].childNodes[1].style.color = colors[color];
 
 
 /* ------------- Function sticky navbar ------------- */
@@ -32,6 +32,8 @@ var li_projetos = document.getElementById("projetos");
 var li_equipe = document.getElementById("equipe");
 var li_sobre = document.getElementById("sobre");
 
+var verifyWhichPageIs = li_inicio.childNodes[1].classList[0];
+
 var sticky = navbar.offsetTop;
 
 function stickyNavbar()
@@ -44,9 +46,9 @@ function stickyNavbar()
         lab.classList.add("header-lab-colored");
         senai.classList.add("header-senai-colored");
         li_inicio.childNodes[1].style.color = colors[color];
-        li_projetos.childNodes[0].style.color = colors[color];
-        li_equipe.childNodes[0].style.color = colors[color];
-        li_sobre.childNodes[0].style.color = colors[color];
+        li_projetos.childNodes[1].style.color = colors[color];
+        li_equipe.childNodes[1].style.color = colors[color];
+        li_sobre.childNodes[1].style.color = colors[color];
     }
     else
     {
@@ -55,9 +57,34 @@ function stickyNavbar()
         senai.classList.remove("header-senai-colored");
         lab.classList.add("header-lab");
         senai.classList.add("header-senai");
-        li_inicio.childNodes[1].style.color = "#fff";
-        li_projetos.childNodes[0].style.color = "#fff";
-        li_equipe.childNodes[0].style.color = "#fff";
-        li_sobre.childNodes[0].style.color = "#fff";
+        if(verifyWhichPageIs == 'pages')
+        {
+            li_inicio.childNodes[1].style.color = "#a0a0a0";
+            li_projetos.childNodes[1].style.color = "#a0a0a0";
+            li_equipe.childNodes[1].style.color = "#a0a0a0";
+            li_sobre.childNodes[1].style.color = "#a0a0a0";
+        }
+        else
+        {
+            li_inicio.childNodes[1].style.color = "#fff";
+            li_projetos.childNodes[1].style.color = "#fff";
+            li_equipe.childNodes[1].style.color = "#fff";
+            li_sobre.childNodes[1].style.color = "#fff";
+        }
+    }
+}
+
+/* ------------- Function to show and hide modal ------------- */
+function iniciaModal(modalID) {
+    const modal = document.getElementById(modalID);
+    if(modal) {
+        modal.classList.add('show');
+        modal.addEventListener('click', (e) =>
+        {
+            if(e.target.id == modalID || e.target.className == 'fa fa-times')
+            {
+                modal.classList.remove('show');
+            }
+        });
     }
 }
