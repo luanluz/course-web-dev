@@ -6,11 +6,12 @@
          
         <div class="projects-cards">
 
-            <a href="project/1">
+            {{#data}}
+            <a href="/projects/{{project_id}}">
                 <div class="project-card">
-                    <img class="project-img" src="/assets/images/tangram.jpg" alt="">
+                    <img class="project-img" src="/uploads/{{project_image}}" alt="Imagem do Projeto">
                     <div class="project-info">
-                        <h4 class="project-name">Tangram</h4>
+                        <h4 class="project-name">{{project_name}}</h4>
                         <div class="project-details">
                             <div>
                                 <i class="fa fa-download"></i>
@@ -28,6 +29,7 @@
                     </div>
                 </div>
             </a>
+            {{/data}}
 
             <div class="new-project-card" onclick="iniciaModal('modal-programacao')">
                 <div class="new-project-item">
@@ -42,22 +44,24 @@
 
 <div id="modal-programacao" class="modal-container">
 	<div class="modal">
-		<i class="fa fa-times"></i>
-        <div class="left-content-modal">
-            <h4 class="title-modal">lorem ipsum</h4>
-        </div>
-        <div class="right-content-modal">
-            <p class="paragraph-modal">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna 
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit 
-                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-            </p>
-        </div>
+        <i class="fa fa-times-circle"></i>
+        <h4 class="title-modal">Enviar projeto</h4>
+        <form class="insertProject" name="insertProject" action="insertProject" method="POST" enctype="multipart/form-data">
+            <input required type="text" name="project_name" id="project_name" placeholder="Nome" class="input-text">
+            <input required type="text" name="project_author" id="project_author" placeholder="Autor" class="input-text">
+            <input required type="text" name="project_license" id="project_license" placeholder="Licença" class="input-text">
+            <input required type="text" name="project_description" id="project_description" placeholder="Descrição" class="input-text">
+            <input required type="text" name="project_tag" id="project_tag" placeholder="Tag" class="input-text">
+            <div class="fileUpload">
+                <span>Enviar imagem <i class="fa fa-file-image"></i> </span>
+               <input required type="file" name="file" id="project_image" class="upload">
+            </div>
+            <div class="fileUpload">
+                <span>Enviar projeto <i class="fa fa-file-archive"></i> </span>
+               <input required type="file" name="file" id="project_file"class="upload">
+            </div>
+            <input required type="submit" name="buttonSubmit" id="buttonSubmit" value="Enviar" class="send-button">
+        </form>
 	</div>
 </div>
 

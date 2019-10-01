@@ -1,31 +1,37 @@
 {{> header active_project='active' page='pages' senai='header-senai-grey' lab='header-lab-grey'}}
 
 <main>
+    {{#data}}
     <section id="project" class="content-page">
-        <h2 class="title-page">Tangram</h2>
+        <h2 class="title-page">{{project_name}}</h2>
          
         <div class="content-project">
             <div class="left-content-project">
-                <img src="/assets/images/tangram.jpg" alt="">
-                <button>
+                <img src="/uploads/{{project_image}}" alt="Imagem do Projeto">
+                <a href="/uploads/{{project_file}}" target="_blank" rel="noopener noreferrer">
                     download
                     <i class="fa fa-download"></i>
-                </button>
+                </a>
             </div>
 
             <div class="right-content-project">
                 <div class="project-informations">
-                    <h4><span>Autor:</span></h4>
-                    <h4><span>Licença:</span></h4>
-                    <h4><span>Descrição:</span></h4>
-                    <h4><span>Tag:</span></h4>
+                    <h4><span>Autor:</span> {{project_author}}</h4>
+                    <h4><span>Licença:</span> {{project_license}}</h4>
+                    <h4><span>Descrição:</span> {{project_description}}</h4>
+                    <h4><span>Tag:</span> {{project_tag}}</h4>
                 </div>
                 <div class="comments">
                     <div class="send-comment">
-                        <input type="text" name="comment" id="comment" placeholder="Adicionar comentário">
-                        <button>Enviar <i class="fa fa-paper-plane"></i></button>
+                        <form name="insertComment" action="/insertComment/{{project_id}}" method="POST">
+                            <input type="text" name="comment" id="comment" placeholder="Adicionar comentário">
+                            <button type="submit" name="buttonSubmit" id="buttonSubmit">Enviar <i class="fa fa-paper-plane"></i></button>
+                        </form>
                     </div>
-                    <p class="coment"> <span>Anônimo:</span> </p>
+                    {{/data}}
+                    {{#comments}}
+                    <p class="coment"> <span>{{user}}:</span> {{comment}}</p>
+                    {{/comments}}
                 </div>
             </div>
         </div>

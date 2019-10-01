@@ -81,7 +81,7 @@ function iniciaModal(modalID) {
         modal.classList.add('show');
         modal.addEventListener('click', (e) =>
         {
-            if(e.target.id == modalID || e.target.className == 'fa fa-times')
+            if(e.target.id == modalID || e.target.className == 'fa fa-times-circle')
             {
                 modal.classList.remove('show');
             }

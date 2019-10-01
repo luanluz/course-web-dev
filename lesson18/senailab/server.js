@@ -7,7 +7,7 @@ const mysql = require('mysql');
 const app = express();
 
 // Importando rotas
-app.use(require('./routes/routes'));
+app.use(require('./controllers/project_controller'));
 
 // Habilitando o CORS
 app.use(function(req, res, next)

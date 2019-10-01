@@ -1,3 +1,7 @@
+create database senailab;
+
+use senailab;
+
 create table projects
 (
 	project_id int not null auto_increment,
@@ -17,6 +21,6 @@ create table comments
 	primary key(comment_id),
 	project_id int not null,
 	user varchar(80),
-	commet varchar(260),
+	comment varchar(260),
 	foreign key (project_id) references projects(project_id)
 );
