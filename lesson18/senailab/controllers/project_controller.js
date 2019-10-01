@@ -36,7 +36,7 @@ router.get("/", function(req, res)
 // Projetos
 router.get("/projects/:id?", function(req, res)
 {
-    // Se não houver paramêtro,
+    // Se não houver parâmetro,
     // busca todos os projetos no
     // banco de dados e apresenta
     if(!req.params.id)
@@ -50,7 +50,7 @@ router.get("/projects/:id?", function(req, res)
         });
     }
 
-    // Casa haja parâmetro, busca
+    // Caso haja parâmetro, busca
     // as informações específicas
     // daquele projeto e apresenta
     else

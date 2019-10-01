@@ -1,0 +1,6 @@
+banco de dados -
+		arquivo .sql em db/
+		usuario: 'root',
+		senha: ''
+
+github - https://github.com/luanluz

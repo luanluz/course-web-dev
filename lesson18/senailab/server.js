@@ -1,7 +1,5 @@
 // Importando as bibliotecas instaladas
 const express = require('express');
-const bodyParser = require('body-parser');
-const mysql = require('mysql');
 
 // Instanciando app do tipo express
 const app = express();
